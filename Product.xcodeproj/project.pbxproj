@@ -21,7 +21,8 @@
 		016C3DEF1CBDF0250007FC8F /* RecruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DE61CBDF0250007FC8F /* RecruitViewController.m */; };
 		016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DEA1CBDF0250007FC8F /* ShopViewController.m */; };
 		016C3DF41CBDF0840007FC8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016C3DF31CBDF0840007FC8F /* Assets.xcassets */; };
-		016C3DF91CBE13080007FC8F /* ShopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DF81CBE13080007FC8F /* ShopScrollView.m */; };
+		016C3E0D1CBE32090007FC8F /* ProductFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3E0B1CBE32090007FC8F /* ProductFirstCell.m */; };
+		016C3E0E1CBE32090007FC8F /* ProductFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C3E0C1CBE32090007FC8F /* ProductFirstCell.xib */; };
 		33AB0BC11224AB4B5769AB17 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6154CAC79B662F4EC311C8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,9 +73,10 @@
 		016C3DEA1CBDF0250007FC8F /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
 		016C3DF21CBDF0500007FC8F /* ProduceShop.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProduceShop.pch; sourceTree = "<group>"; };
 		016C3DF31CBDF0840007FC8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		016C3DF71CBE13080007FC8F /* ShopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopScrollView.h; sourceTree = "<group>"; };
-		016C3DF81CBE13080007FC8F /* ShopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopScrollView.m; sourceTree = "<group>"; };
-		016C3DFA1CBE131C0007FC8F /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		016C3E0A1CBE32090007FC8F /* ProductFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductFirstCell.h; sourceTree = "<group>"; };
+		016C3E0B1CBE32090007FC8F /* ProductFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductFirstCell.m; sourceTree = "<group>"; };
+		016C3E0C1CBE32090007FC8F /* ProductFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductFirstCell.xib; sourceTree = "<group>"; };
+		016C3E0F1CBE34540007FC8F /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		5718562338131B510866A556 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6D73651F4FB017D20A6BD624 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7A6154CAC79B662F4EC311C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,11 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				016C3DF31CBDF0840007FC8F /* Assets.xcassets */,
-				016C3DF21CBDF0500007FC8F /* ProduceShop.pch */,
 				016C3DF11CBDF02C0007FC8F /* Library */,
 				016C3DD51CBDF0250007FC8F /* Class */,
 				016C3DA51CBDF00D0007FC8F /* AppDelegate.h */,
 				016C3DA61CBDF00D0007FC8F /* AppDelegate.m */,
+				016C3DF21CBDF0500007FC8F /* ProduceShop.pch */,
 				016C3DA81CBDF00D0007FC8F /* ViewController.h */,
 				016C3DA91CBDF00D0007FC8F /* ViewController.m */,
 				016C3DAB1CBDF00D0007FC8F /* Main.storyboard */,
@@ -216,6 +218,8 @@
 		016C3DDF1CBDF0250007FC8F /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				016C3E051CBE28930007FC8F /* View */,
+				016C3E061CBE28930007FC8F /* Model */,
 				016C3DE01CBDF0250007FC8F /* Controller */,
 			);
 			path = Product;
@@ -226,6 +230,7 @@
 			children = (
 				016C3DE11CBDF0250007FC8F /* ProductViewController.h */,
 				016C3DE21CBDF0250007FC8F /* ProductViewController.m */,
+				016C3E0F1CBE34540007FC8F /* Product.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,7 +267,6 @@
 			children = (
 				016C3DE91CBDF0250007FC8F /* ShopViewController.h */,
 				016C3DEA1CBDF0250007FC8F /* ShopViewController.m */,
-				016C3DFA1CBE131C0007FC8F /* Shop.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,10 +288,25 @@
 		016C3DF61CBE12D40007FC8F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				016C3DF71CBE13080007FC8F /* ShopScrollView.h */,
-				016C3DF81CBE13080007FC8F /* ShopScrollView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		016C3E051CBE28930007FC8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				016C3E0A1CBE32090007FC8F /* ProductFirstCell.h */,
+				016C3E0B1CBE32090007FC8F /* ProductFirstCell.m */,
+				016C3E0C1CBE32090007FC8F /* ProductFirstCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		016C3E061CBE28930007FC8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		14E73FB3C1CCD705C6C6806A /* Pods */ = {
@@ -415,6 +434,7 @@
 			files = (
 				016C3DB21CBDF00D0007FC8F /* LaunchScreen.storyboard in Resources */,
 				016C3DF41CBDF0840007FC8F /* Assets.xcassets in Resources */,
+				016C3E0E1CBE32090007FC8F /* ProductFirstCell.xib in Resources */,
 				016C3DAD1CBDF00D0007FC8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,8 +500,8 @@
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,
 				016C3DA41CBDF00D0007FC8F /* main.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
-				016C3DF91CBE13080007FC8F /* ShopScrollView.m in Sources */,
 				016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */,
+				016C3E0D1CBE32090007FC8F /* ProductFirstCell.m in Sources */,
 				016C3DEF1CBDF0250007FC8F /* RecruitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
