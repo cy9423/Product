@@ -24,7 +24,7 @@
     //创建试图控制器对象
     MainTabBarController *mc = [[MainTabBarController alloc] init];
     MainNavigationController *mnc = [[MainNavigationController alloc] initWithRootViewController:mc];
-    int a = 23;
+    
     //设置窗口的背景颜色
     self.window.backgroundColor = [UIColor whiteColor];
     
