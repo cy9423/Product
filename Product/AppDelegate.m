@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
+#import "MainNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds] ];
+    
+    //创建试图控制器对象
+    MainTabBarController *mc = [[MainTabBarController alloc] init];
+    MainNavigationController *mnc = [[MainNavigationController alloc] initWithRootViewController:mc];
+    
+    //设置窗口的背景颜色
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    //设置窗口的根视图控制器
+    self.window.rootViewController = mnc;
+    
+    //设置让窗口显示
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
