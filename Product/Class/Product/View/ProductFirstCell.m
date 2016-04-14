@@ -23,10 +23,12 @@
 
 - (void)updateCellWith:(NSArray *)picArr And:(NSArray *)titleArr
 {
+    //实现顶部视图循环滚动
     self.dataArr = [NSMutableArray arrayWithArray:picArr];
     [self.dataArr insertObject:picArr.lastObject atIndex:0];
     [self.dataArr addObject:picArr.firstObject];
     
+    //实现底部视图循环滚动
     self.titleArr = [NSMutableArray arrayWithArray:titleArr];
     [self.titleArr insertObject:titleArr.lastObject atIndex:0];
     [self.titleArr addObject:titleArr.firstObject];
@@ -39,6 +41,7 @@
     [self createAdView];
 }
 
+#pragma mark 自定义button
 - (void)customView
 {
     float w = (self.frame.size.width - 160) / 5.0;
@@ -66,6 +69,7 @@
     [self addSubview:view];
 }
 
+#pragma mark 顶部视图滚动
 - (void)createSdView
 {
     _w = self.sdScrollView.frame.size.width;
@@ -96,31 +100,31 @@
     [self addSubview:self.pc];
     
     //开启定时器 实现循环滚动
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeRefresh) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(timeRefresh) userInfo:nil repeats:YES];
 }
 
-#pragma mark - 定时器
+#pragma mark - 顶部定时器
 - (void)timeRefresh
 {
-    if (self.page == 4) {
-        [self.sdScrollView scrollRectToVisible:CGRectMake(_w * (self.page + 1), 0, _w, _h) animated:YES];
+    self.page ++;
+    
+    if (self.page == self.dataArr.count - 2)
+    {
+       [self.sdScrollView scrollRectToVisible:CGRectMake(_w * (self.page + 2), 0, _w, _h) animated:YES];
         
         self.sdScrollView.contentOffset = CGPointMake(_w, 0);
         self.page = 0 ;
-        
     }
     
     else
     {
-        self.page ++;
         [self.sdScrollView scrollRectToVisible:CGRectMake(_w * (self.page + 1), 0, _w, _h) animated:YES];
     }
-    NSLog(@"123");
+    
     self.pc.currentPage = self.page;
 }
 
-
-
+#pragma mark 底部视图滚动
 - (void)createAdView
 {
     _ad_w = self.adScrollView.frame.size.width;
@@ -141,15 +145,16 @@
     self.adScrollView.pagingEnabled = YES;
     
     //开启定时器 实现循环滚动
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(titleRefresh) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(titleRefresh) userInfo:nil repeats:YES];
 
 }
 
+#pragma mark 底部定时器
 - (void)titleRefresh
 {
-    
+    self.num ++;
     if (self.num == self.titleArr.count - 2) {
-        [self.adScrollView scrollRectToVisible:CGRectMake( 0, _ad_h * (self.num + 1), _ad_w, _ad_h) animated:YES];
+        [self.adScrollView scrollRectToVisible:CGRectMake( 0, _ad_h * (self.num + 2), _ad_w, _ad_h) animated:YES];
         
         self.adScrollView.contentOffset = CGPointMake( 0, _ad_h);
         self.num = 0 ;
@@ -157,11 +162,8 @@
     }
     else
     {
-        self.num ++;
         [self.adScrollView scrollRectToVisible:CGRectMake( 0, _ad_h * (self.num + 1), _ad_w, _ad_h) animated:YES];
     }
-
-    
 }
 
 @end
