@@ -58,7 +58,9 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     self.title = item.title;
-    
+    if ([self.title isEqualToString:@"用工"]) {
+        self.title = @"";
+    }
 }
 
 
