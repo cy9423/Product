@@ -109,12 +109,13 @@
         self.page = 0 ;
         
     }
+    
     else
     {
         self.page ++;
         [self.sdScrollView scrollRectToVisible:CGRectMake(_w * (self.page + 1), 0, _w, _h) animated:YES];
     }
-    
+    NSLog(@"123");
     self.pc.currentPage = self.page;
 }
 
