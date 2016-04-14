@@ -9,6 +9,7 @@
 #ifndef Product_h
 #define Product_h
 
+#import "ProductHeaderView.h"
 #import "ProductFirstCell.h"
 
 

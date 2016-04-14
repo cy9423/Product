@@ -1,14 +1,14 @@
 //
-//  ProductFirstCell.m
+//  ProductSingularCell.m
 //  Product
 //
 //  Created by cy on 16/4/14.
 //  Copyright © 2016年 cy. All rights reserved.
 //
 
-#import "ProductFirstCell.h"
+#import "ProductSingularCell.h"
 
-@implementation ProductFirstCell
+@implementation ProductSingularCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -9,6 +9,7 @@
 #import "ProductViewController.h"
 #import "Product.h"
 
+
 @interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *tv;
@@ -29,6 +30,7 @@
     
     [self createTableView];
     
+    [self createTableHeaderView];
 }
 
 - (void)initData
@@ -39,9 +41,21 @@
     titleArr = [NSMutableArray arrayWithObjects:@"买啥都2快",@"促销大减价",@"就是便宜",@"快来买啊", nil];
 }
 
+- (void)createTableHeaderView
+{
+    ProductHeaderView *pv = [[[NSBundle mainBundle]loadNibNamed:@"ProductHeaderView" owner:nil options:nil] firstObject];
+
+    pv.frame = CGRectMake(0, 0, SCREEN_WIDTH, 400);
+    
+    [pv updateViewWith:picArr And:titleArr];
+    
+    tv.tableHeaderView = pv;
+}
+
 - (void)createTableView
 {
-    tv = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    tv = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     
     tv.delegate = self;
     tv.dataSource = self;
@@ -66,20 +80,32 @@
 {
     ProductFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdFirst" forIndexPath:indexPath];
     
-    [cell updateCellWith:picArr And:titleArr];
-    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //去除选中停留效果
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 400;
+    return 300;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        return v;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 50;
 }
 
 - (void)didReceiveMemoryWarning {
