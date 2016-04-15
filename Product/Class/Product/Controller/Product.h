@@ -10,7 +10,12 @@
 #define Product_h
 
 #import "ProductHeaderView.h"
+
 #import "ProductFirstCell.h"
+#import "ProductSecondCell.h"
+#import "ProductDoubleCell.h"
+#import "ProductSingularCell.h"
 
 
+#import "ProductCategoryViewController.h"
 #endif /* Product_h */

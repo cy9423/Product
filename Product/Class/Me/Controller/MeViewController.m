@@ -54,7 +54,7 @@
 }
 
 - (void)createTableView{
-    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     _table.bounces = NO;
     _table.tableFooterView = [[UIView alloc]init];
     _table.delegate = self;

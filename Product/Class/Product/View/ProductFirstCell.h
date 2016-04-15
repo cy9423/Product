@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ProductFirstCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *view_1;
 
-@property (weak, nonatomic) IBOutlet UIView *view_2;
 
-@property (weak, nonatomic) IBOutlet UIView *view_3;
 
-@property (weak, nonatomic) IBOutlet UIView *view_4;
+
 @end

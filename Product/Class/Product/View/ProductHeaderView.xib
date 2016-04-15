@@ -11,6 +11,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIE-X4-UL1">
+                    <rect key="frame" x="-93" y="-100" width="600" height="600"/>
+                </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYA-cq-3Rs">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                     <subviews>
@@ -94,6 +97,11 @@
                 <constraint firstAttribute="trailing" secondItem="y3C-8y-n3H" secondAttribute="trailing" id="wWW-DA-Rt0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="pIE-X4-UL1"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="adScrollView" destination="vU7-b9-QYz" id="Kca-2X-GBs"/>
                 <outlet property="cutomView" destination="y3C-8y-n3H" id="xPf-Nc-jmR"/>
@@ -102,11 +110,6 @@
             </connections>
             <point key="canvasLocation" x="459" y="446"/>
         </view>
-        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pIE-X4-UL1">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="509" y="728"/>
-        </scrollView>
     </objects>
     <resources>
         <image name="ico_zhuangxiuyouhui_" width="40" height="40"/>

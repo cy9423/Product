@@ -72,7 +72,7 @@
 - (void)customView
 {
     float w = (self.frame.size.width - 160) / 5.0;
-    NSLog(@"%f",w);
+    
     NSArray *arr = @[@"ico_wujin",@"ico_jiancai",@"ico_pinpai",@"ico_options"];
     NSArray *art = @[@"五金",@"建材",@"品牌",@"其他类"];
     
@@ -82,6 +82,9 @@
         [self.cutomView addSubview:btn];
         
         [btn setBackgroundImage:[UIImage imageNamed:arr[i]] forState:UIControlStateNormal];
+        
+        btn.tag = 100 + i;
+        [btn addTarget:self action:@selector(onClickBtn:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake((i + 1) * w + i * 40.0, 52, 40, 21)];
         label.text = art[i];
@@ -94,6 +97,14 @@
     
     view.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:view];
+}
+
+- (void)onClickBtn:(UIButton *)btn
+{
+    if ((int)btn.tag - 100 == 0) {
+        self.btnBlcok();
+    }
+    
 }
 
 #pragma mark 顶部视图滚动
@@ -164,6 +175,7 @@
         [self.adScrollView addSubview:btn];
         
         [btn setTitle:self.titleArr[i] forState:UIControlStateNormal];
+        
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     }

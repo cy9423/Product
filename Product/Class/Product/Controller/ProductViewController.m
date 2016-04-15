@@ -16,7 +16,11 @@
     NSMutableArray *dataArr;
     NSMutableArray *picArr;
     NSMutableArray *titleArr;
+    
+    ProductHeaderView *pv;
 }
+
+@property (nonatomic,strong) ProductCategoryViewController *pcc;
 
 @end
 
@@ -43,11 +47,19 @@
 
 - (void)createTableHeaderView
 {
-    ProductHeaderView *pv = [[[NSBundle mainBundle]loadNibNamed:@"ProductHeaderView" owner:nil options:nil] firstObject];
+    pv = [[[NSBundle mainBundle]loadNibNamed:@"ProductHeaderView" owner:nil options:nil] firstObject];
 
     pv.frame = CGRectMake(0, 0, SCREEN_WIDTH, 400);
     
     [pv updateViewWith:picArr And:titleArr];
+    
+    pv.btnBlcok = ^(){
+        
+        _pcc = [[ProductCategoryViewController alloc] init];
+        
+       [self.navigationController pushViewController:_pcc animated:YES];
+       
+    };
     
     tv.tableHeaderView = pv;
 }
@@ -63,12 +75,16 @@
     [self.view addSubview:tv];
     
     [tv registerNib:[UINib nibWithNibName:@"ProductFirstCell" bundle:nil] forCellReuseIdentifier:@"pdFirst"];
+    [tv registerNib:[UINib nibWithNibName:@"ProductSecondCell" bundle:nil] forCellReuseIdentifier:@"pdSecond"];
+    [tv registerNib:[UINib nibWithNibName:@"ProductDoubleCell" bundle:nil] forCellReuseIdentifier:@"pdDouble"];
+    [tv registerNib:[UINib nibWithNibName:@"ProductSingularCell" bundle:nil] forCellReuseIdentifier:@"pdSingular"];
+    
 }
 #pragma mark - tableview delegate
 //段数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 4;
 }
 //行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -78,9 +94,28 @@
 //cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdFirst" forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        ProductFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdFirst" forIndexPath:indexPath];
+        
+        return cell;
+    }
+    if (indexPath.section == 1) {
+        ProductSecondCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdSecond" forIndexPath:indexPath];
+        
+        return cell;
+    }
+    if (indexPath.section > 1 && indexPath.section %2 ==0) {
+        ProductDoubleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdDouble" forIndexPath:indexPath];
+        
+        return cell;
+    }
+    if (indexPath.section > 1 && indexPath.section %2 !=0) {
+        ProductSingularCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdSingular" forIndexPath:indexPath];
+        
+        return cell;
+    }
     
-    return cell;
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,16 +126,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 300;
+    return 200;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-        return v;
-    }
-    return nil;
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+   
+    return v;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
