@@ -31,6 +31,10 @@
                         <rect key="frame" x="0.0" y="150" width="414" height="149.5"/>
                         <color key="backgroundColor" red="1" green="0.89640570608563996" blue="0.76194822136363216" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDD-Ku-6gm">
+                        <rect key="frame" x="-93" y="-150" width="600" height="600"/>
+                        <color key="backgroundColor" red="0.25484799697605431" green="0.85685015307698142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="XSF-Ya-Uwz" secondAttribute="trailing" id="1TB-wc-KGF"/>
@@ -50,20 +54,18 @@
                     <constraint firstItem="XSF-Ya-Uwz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="leZ-wb-7JX"/>
                     <constraint firstItem="vaS-dR-PnJ" firstAttribute="leading" secondItem="dUC-eY-wWq" secondAttribute="trailing" id="tD0-vO-4GJ"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="lDD-Ku-6gm"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="view_1" destination="dUC-eY-wWq" id="Rq5-U1-m9N"/>
                 <outlet property="view_2" destination="vaS-dR-PnJ" id="Q75-4M-UOb"/>
-                <outlet property="view_3" destination="lDD-Ku-6gm" id="GxL-wT-fS7"/>
                 <outlet property="view_4" destination="87C-aN-97c" id="MNm-hV-hol"/>
             </connections>
             <point key="canvasLocation" x="235" y="114"/>
         </tableViewCell>
-        <view contentMode="scaleToFill" id="lDD-Ku-6gm">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.25484799697605431" green="0.85685015307698142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="305" y="447"/>
-        </view>
     </objects>
 </document>
