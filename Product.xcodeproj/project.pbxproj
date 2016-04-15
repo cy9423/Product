@@ -32,6 +32,9 @@
 		016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3E331CBF82FF0007FC8F /* ProductSingularCell.m */; };
 		016C3E361CBF82FF0007FC8F /* ProductSingularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C3E341CBF82FF0007FC8F /* ProductSingularCell.xib */; };
 		33AB0BC11224AB4B5769AB17 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6154CAC79B662F4EC311C8 /* libPods.a */; };
+		B0191A361CC0740600F36C2C /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0191A311CC0740600F36C2C /* LaborVC.m */; };
+		B0191A371CC0740600F36C2C /* PushAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0191A331CC0740600F36C2C /* PushAddVC.m */; };
+		B0191A381CC0740600F36C2C /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0191A351CC0740600F36C2C /* WorkerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,12 @@
 		5718562338131B510866A556 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6D73651F4FB017D20A6BD624 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7A6154CAC79B662F4EC311C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0191A301CC0740600F36C2C /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaborVC.h; path = ../../../../../../Desktop/LaborVC.h; sourceTree = "<group>"; };
+		B0191A311CC0740600F36C2C /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaborVC.m; path = ../../../../../../Desktop/LaborVC.m; sourceTree = "<group>"; };
+		B0191A321CC0740600F36C2C /* PushAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushAddVC.h; path = ../../../../../../Desktop/PushAddVC.h; sourceTree = "<group>"; };
+		B0191A331CC0740600F36C2C /* PushAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushAddVC.m; path = ../../../../../../Desktop/PushAddVC.m; sourceTree = "<group>"; };
+		B0191A341CC0740600F36C2C /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkerVC.h; path = ../../../../../../Desktop/WorkerVC.h; sourceTree = "<group>"; };
+		B0191A351CC0740600F36C2C /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkerVC.m; path = ../../../../../../Desktop/WorkerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +274,12 @@
 		016C3DE41CBDF0250007FC8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B0191A301CC0740600F36C2C /* LaborVC.h */,
+				B0191A311CC0740600F36C2C /* LaborVC.m */,
+				B0191A321CC0740600F36C2C /* PushAddVC.h */,
+				B0191A331CC0740600F36C2C /* PushAddVC.m */,
+				B0191A341CC0740600F36C2C /* WorkerVC.h */,
+				B0191A351CC0740600F36C2C /* WorkerVC.m */,
 				016C3DE51CBDF0250007FC8F /* RecruitViewController.h */,
 				016C3DE61CBDF0250007FC8F /* RecruitViewController.m */,
 			);
@@ -530,13 +545,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0191A361CC0740600F36C2C /* LaborVC.m in Sources */,
 				016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
+				B0191A381CC0740600F36C2C /* WorkerVC.m in Sources */,
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,
 				016C3DA41CBDF00D0007FC8F /* main.m in Sources */,
+				B0191A371CC0740600F36C2C /* PushAddVC.m in Sources */,
 				016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
 				016C3E301CBF82BF0007FC8F /* ProductDoubleCell.m in Sources */,

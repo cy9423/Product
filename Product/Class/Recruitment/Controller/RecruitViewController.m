@@ -7,10 +7,11 @@
 //
 
 #import "RecruitViewController.h"
-
+#import "LaborVC.h"
+#import "WorkerVC.h"
 @interface RecruitViewController ()
-@property(nonatomic, retain)UIViewController *labor;//用工
-@property(nonatomic, retain)UIViewController *worker;//散工
+@property(nonatomic, retain)LaborVC *labor;//用工
+@property(nonatomic, retain)WorkerVC *worker;//散工
 @property(nonatomic, retain)UISegmentedControl *recruit;
 @end
 
@@ -54,13 +55,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _labor = [[UIViewController alloc]init];
+    _labor = [[LaborVC alloc]init];
     [_labor.view setFrame:[UIScreen mainScreen].bounds];
-    _labor.view.backgroundColor = [UIColor redColor];
-    
-    _worker = [[UIViewController alloc]init];
+    _worker = [[WorkerVC alloc]init];
     [_worker.view setFrame:[UIScreen mainScreen].bounds];
-    _worker.view.backgroundColor = [UIColor yellowColor];
     
     [self.view addSubview:_labor.view];
     [self addChildViewController:_labor];

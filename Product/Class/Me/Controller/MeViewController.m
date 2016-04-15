@@ -11,14 +11,15 @@
 @interface MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, retain)UITableView *table;
 @property(nonatomic, retain)NSArray *tablist;
+@property(nonatomic, assign)BOOL orderEx;//判断我的订单cell是否展开
 @end
 
 @implementation MeViewController
-
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = TabBarBackGroundColor;
+    _orderEx = NO;//不展开
     
     //这里是标题view
     _table.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT*0.375)];
@@ -48,8 +49,10 @@
     _tablist = [NSArray arrayWithObjects:@"个人设置",
                 @"我的收藏",
                 @"我的订单",
+                @"          我下的订单",
+                @"          我接的订单",
                 @"我的积分",
-                @"我的优惠券",@"",@"",@"",@"",@"", nil];
+                @"我的优惠券", nil];
     [self createTableView];
 }
 
@@ -83,10 +86,14 @@
             
         }return cell;
         case 3:{
-            
+            if (!_orderEx) {
+                cell.textLabel.text = @"";
+            }
         }return cell;
         case 4:{
-            
+            if (!_orderEx) {
+                cell.textLabel.text = @"";
+            }
         }return cell;
         default:
             return cell;
@@ -114,6 +121,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 3||indexPath.row == 4) {
+        if (!_orderEx) {
+            return 0;
+        }
+    }
     return 60;
 }
 
@@ -137,7 +149,7 @@
     self.view.userInteractionEnabled = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //将点击事件单独拿出来
-    [self selectWithTag:indexPath.section*5+indexPath.row];
+    [self selectWithTag:indexPath.row];
     self.view.userInteractionEnabled = YES;
 }
 
@@ -148,8 +160,12 @@
             break;
         case 1:{}
             break;
-        case 2:{}
-            break;
+            
+        case 2:{
+            _orderEx = !_orderEx;
+            [_table reloadData];
+        }break;
+            
         case 3:{}
             break;
         case 4:{}
