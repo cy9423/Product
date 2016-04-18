@@ -27,6 +27,7 @@
     
     [self createTableView];
     
+    [self createTableViewHeaderView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +46,7 @@
     tv = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     
     [self.view addSubview:tv];
-    [self createTableViewHeaderView];
+    
     //tv.delegate = self;
     //tv.dataSource = self;
     
@@ -73,9 +74,7 @@
 
 - (void)createTableViewHeaderView
 {
-    ProductInfoHeaderView *pv = [[[NSBundle mainBundle]loadNibNamed:@"ProductInfoHeaderView" owner:nil options:nil] firstObject];
-    
-    pv.frame = CGRectMake(0, 0, SCREEN_WIDTH, 300);
+    ProductInfoHeaderView *pv = [[[NSBundle mainBundle]loadNibNamed:@"ProductInfoHeaderView" owner:nil options:nil] lastObject];
     
     [pv updateViewWith:dataArr];
     

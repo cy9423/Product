@@ -11,6 +11,7 @@
 @interface ProductFirstCell : UITableViewCell
 
 
+@property (weak, nonatomic) IBOutlet UIView *testView;
 
 
 @end

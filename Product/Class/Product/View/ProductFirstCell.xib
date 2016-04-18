@@ -60,7 +60,10 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="276" y="132"/>
+            <connections>
+                <outlet property="testView" destination="dUC-eY-wWq" id="6YP-Yy-D2P"/>
+            </connections>
+            <point key="canvasLocation" x="309" y="-236"/>
         </tableViewCell>
     </objects>
 </document>

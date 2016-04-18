@@ -38,22 +38,32 @@
        float w = self.frame.size.width;
        float h = self.frame.size.height;
        
-       float btnW = 40;
-       
+       float btnW = 20;
+       float labelW = 40;
        //-
        self.decBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, btnW, h)];
        [self addSubview:self.decBtn];
        [self.decBtn setTitle:@"-" forState:UIControlStateNormal];
        [self.decBtn addTarget:self action:@selector(onDec:) forControlEvents:UIControlEventTouchUpInside];
+       [self.decBtn setBackgroundColor:[UIColor cyanColor]];
+       
+       //=
+       self.resultLb = [[UILabel alloc] initWithFrame:CGRectMake(btnW, 0, labelW, h)];
+       [self addSubview:self.resultLb];
+       self.resultLb.backgroundColor = [UIColor whiteColor];
+       _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
+       [self addSubview:_resultLb];
+       _resultLb.textColor = [UIColor blackColor];
+       
+       
        //+
-       self.addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, btnW, h)];
+       self.addBtn = [[UIButton alloc] initWithFrame:CGRectMake(btnW + labelW, 0, btnW, h)];
        [self addSubview:self.addBtn];
        [self.addBtn addTarget:self action:@selector(onAdd:) forControlEvents:UIControlEventTouchUpInside];
        [self.addBtn setTitle:@"+" forState:UIControlStateNormal];
-       //=
-       self.resultLb = [[UILabel alloc] initWithFrame:CGRectMake(w - btnW, 0, (w - btnW * 2), h)];
-       [self addSubview:self.resultLb];
-       _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
+       [self.addBtn setBackgroundColor:[UIColor cyanColor]];
+       
+       
    }
     return self;
 }
@@ -64,6 +74,9 @@
     if (currentNum < min) {
         currentNum = min;
     }
+    self.resultLb.backgroundColor = [UIColor whiteColor];
+    _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
+    [self.resultLb reloadInputViews];
 }
 
 - (void)onAdd:(UIButton *)btn
@@ -72,6 +85,9 @@
     if (currentNum > max) {
         currentNum = max;
     }
+    self.resultLb.backgroundColor = [UIColor whiteColor];
+    _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
+    [self.resultLb reloadInputViews];
 }
 
 

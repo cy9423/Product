@@ -40,7 +40,7 @@
 #pragma mark 顶部视图滚动
 - (void)createSdView
 {
-    w = self.frame.size.width;
+    w = SCREEN_WIDTH;
     h = self.pd_InfoScrollView.frame.size.height;
 
     for (int i = 0; i < self.picArr.count; i++) {
@@ -56,7 +56,7 @@
     self.pd_InfoScrollView.contentOffset = CGPointMake(w, 0);
     self.pd_InfoScrollView.pagingEnabled = YES;
 
-    self.pc = [[UIPageControl alloc]initWithFrame:CGRectMake((w -80) / 2.0, h - 20, 80, 20)];
+    self.pc = [[UIPageControl alloc]initWithFrame:CGRectMake((w -80) / 2.0, h - 40, 80, 20)];
     
     self.page = 0;
     self.pc.numberOfPages = self.picArr.count - 2;
@@ -68,7 +68,7 @@
     [self addSubview:self.pc];
     
     //开启定时器 实现循环滚动
-    [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(timeRefresh) userInfo:nil repeats:YES];
+   // [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(timeRefresh) userInfo:nil repeats:YES];
 }
 
 #pragma mark - 顶部定时器
