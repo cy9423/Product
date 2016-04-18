@@ -36,6 +36,9 @@
 		B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9651CC45CA2003E2D11 /* WorkerCellModel.m */; };
 		B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9681CC45CA2003E2D11 /* LaborCell.m */; };
 		B004C96E1CC45CA2003E2D11 /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C96A1CC45CA2003E2D11 /* WorkerCell.m */; };
+		B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9701CC45EAD003E2D11 /* LaborVC.m */; };
+		B004C9761CC45EC2003E2D11 /* PushAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9731CC45EC2003E2D11 /* PushAddVC.m */; };
+		B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9751CC45EC2003E2D11 /* WorkerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,12 @@
 		B004C9681CC45CA2003E2D11 /* LaborCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCell.m; sourceTree = "<group>"; };
 		B004C9691CC45CA2003E2D11 /* WorkerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCell.h; sourceTree = "<group>"; };
 		B004C96A1CC45CA2003E2D11 /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
+		B004C96F1CC45EAD003E2D11 /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborVC.h; sourceTree = "<group>"; };
+		B004C9701CC45EAD003E2D11 /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborVC.m; sourceTree = "<group>"; };
+		B004C9721CC45EC2003E2D11 /* PushAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAddVC.h; sourceTree = "<group>"; };
+		B004C9731CC45EC2003E2D11 /* PushAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAddVC.m; sourceTree = "<group>"; };
+		B004C9741CC45EC2003E2D11 /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
+		B004C9751CC45EC2003E2D11 /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +290,12 @@
 			children = (
 				016C3DE51CBDF0250007FC8F /* RecruitViewController.h */,
 				016C3DE61CBDF0250007FC8F /* RecruitViewController.m */,
+				B004C96F1CC45EAD003E2D11 /* LaborVC.h */,
+				B004C9701CC45EAD003E2D11 /* LaborVC.m */,
+				B004C9721CC45EC2003E2D11 /* PushAddVC.h */,
+				B004C9731CC45EC2003E2D11 /* PushAddVC.m */,
+				B004C9741CC45EC2003E2D11 /* WorkerVC.h */,
+				B004C9751CC45EC2003E2D11 /* WorkerVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -570,6 +585,7 @@
 				B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
+				B004C9761CC45EC2003E2D11 /* PushAddVC.m in Sources */,
 				B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
@@ -578,6 +594,8 @@
 				B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */,
 				016C3DA41CBDF00D0007FC8F /* main.m in Sources */,
 				016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */,
+				B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */,
+				B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
 				016C3E301CBF82BF0007FC8F /* ProductDoubleCell.m in Sources */,
 				016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */,
