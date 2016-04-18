@@ -52,12 +52,12 @@
                 @"          我下的订单",
                 @"          我接的订单",
                 @"我的积分",
-                @"我的优惠券", nil];
+                @"我的优惠券", @"",@"",nil];
     [self createTableView];
 }
 
 - (void)createTableView{
-    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-40) style:UITableViewStylePlain];
     _table.bounces = NO;
     _table.tableFooterView = [[UIView alloc]init];
     _table.delegate = self;

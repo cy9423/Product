@@ -10,8 +10,8 @@
 #import "LaborVC.h"
 #import "WorkerVC.h"
 @interface RecruitViewController ()
-@property(nonatomic, retain)LaborVC *labor;//用工
-@property(nonatomic, retain)WorkerVC *worker;//散工
+@property(nonatomic, strong)LaborVC *labor;//用工
+@property(nonatomic, strong)WorkerVC *worker;//散工
 @property(nonatomic, retain)UISegmentedControl *recruit;
 @end
 
@@ -28,7 +28,7 @@
         _recruit.tintColor = [UIColor greenColor];
         _recruit.layer.masksToBounds = YES;
         _recruit.layer.cornerRadius = 20;
-        _recruit.layer.borderWidth = 3;
+        _recruit.layer.borderWidth = 1;
         _recruit.layer.borderColor = TabBarBackGroundColor.CGColor;
         NSDictionary* selectedTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
                                                  NSForegroundColorAttributeName: [UIColor whiteColor]};
@@ -43,6 +43,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.navigationController.navigationBar addSubview:_recruit];
 }
 
@@ -56,9 +57,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     _labor = [[LaborVC alloc]init];
-    [_labor.view setFrame:[UIScreen mainScreen].bounds];
+    [_labor.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
     _worker = [[WorkerVC alloc]init];
-    [_worker.view setFrame:[UIScreen mainScreen].bounds];
+    [_worker.view setFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
     
     [self.view addSubview:_labor.view];
     [self addChildViewController:_labor];
