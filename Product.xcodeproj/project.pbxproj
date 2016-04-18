@@ -32,9 +32,6 @@
 		016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3E331CBF82FF0007FC8F /* ProductSingularCell.m */; };
 		016C3E361CBF82FF0007FC8F /* ProductSingularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C3E341CBF82FF0007FC8F /* ProductSingularCell.xib */; };
 		33AB0BC11224AB4B5769AB17 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6154CAC79B662F4EC311C8 /* libPods.a */; };
-		B004C95A1CC45C51003E2D11 /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9591CC45C51003E2D11 /* LaborVC.m */; };
-		B004C95F1CC45C5D003E2D11 /* PushAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C95C1CC45C5D003E2D11 /* PushAddVC.m */; };
-		B004C9601CC45C5D003E2D11 /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C95E1CC45C5D003E2D11 /* WorkerVC.m */; };
 		B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9631CC45CA2003E2D11 /* LaborCellModel.m */; };
 		B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9651CC45CA2003E2D11 /* WorkerCellModel.m */; };
 		B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9681CC45CA2003E2D11 /* LaborCell.m */; };
@@ -107,12 +104,6 @@
 		5718562338131B510866A556 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6D73651F4FB017D20A6BD624 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7A6154CAC79B662F4EC311C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B004C9581CC45C51003E2D11 /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborVC.h; sourceTree = "<group>"; };
-		B004C9591CC45C51003E2D11 /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborVC.m; sourceTree = "<group>"; };
-		B004C95B1CC45C5D003E2D11 /* PushAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAddVC.h; sourceTree = "<group>"; };
-		B004C95C1CC45C5D003E2D11 /* PushAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAddVC.m; sourceTree = "<group>"; };
-		B004C95D1CC45C5D003E2D11 /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
-		B004C95E1CC45C5D003E2D11 /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
 		B004C9621CC45CA2003E2D11 /* LaborCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCellModel.h; sourceTree = "<group>"; };
 		B004C9631CC45CA2003E2D11 /* LaborCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCellModel.m; sourceTree = "<group>"; };
 		B004C9641CC45CA2003E2D11 /* WorkerCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCellModel.h; sourceTree = "<group>"; };
@@ -290,12 +281,6 @@
 			children = (
 				016C3DE51CBDF0250007FC8F /* RecruitViewController.h */,
 				016C3DE61CBDF0250007FC8F /* RecruitViewController.m */,
-				B004C9581CC45C51003E2D11 /* LaborVC.h */,
-				B004C9591CC45C51003E2D11 /* LaborVC.m */,
-				B004C95B1CC45C5D003E2D11 /* PushAddVC.h */,
-				B004C95C1CC45C5D003E2D11 /* PushAddVC.m */,
-				B004C95D1CC45C5D003E2D11 /* WorkerVC.h */,
-				B004C95E1CC45C5D003E2D11 /* WorkerVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -581,7 +566,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B004C95A1CC45C51003E2D11 /* LaborVC.m in Sources */,
 				016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */,
 				B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
@@ -589,12 +573,10 @@
 				B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
-				B004C9601CC45C5D003E2D11 /* WorkerVC.m in Sources */,
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,
 				B004C96E1CC45CA2003E2D11 /* WorkerCell.m in Sources */,
 				B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */,
 				016C3DA41CBDF00D0007FC8F /* main.m in Sources */,
-				B004C95F1CC45C5D003E2D11 /* PushAddVC.m in Sources */,
 				016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
 				016C3E301CBF82BF0007FC8F /* ProductDoubleCell.m in Sources */,
