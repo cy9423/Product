@@ -34,33 +34,39 @@
        
        currentNum = Min;
        
-       float w = self.frame.size.width;
-       float h = self.frame.size.height;
-       
-       float btnW = 20;
-       float labelW = 40;
+       float w = frame.size.width;
+       float h = frame.size.height;
+    
        //-
-       self.decBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, btnW, h)];
+       self.decBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, w / 4.0, h)];
        [self addSubview:self.decBtn];
        [self.decBtn setTitle:@"-" forState:UIControlStateNormal];
        [self.decBtn addTarget:self action:@selector(onDec:) forControlEvents:UIControlEventTouchUpInside];
-       [self.decBtn setBackgroundColor:[UIColor cyanColor]];
+       [self.decBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+       [self.decBtn setBackgroundColor:[UIColor whiteColor]];
+       self.decBtn.layer.masksToBounds = YES;
+       self.decBtn.layer.borderWidth = 1.0;
+       self.decBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
        
        //=
-       self.resultLb = [[UILabel alloc] initWithFrame:CGRectMake(btnW, 0, labelW, h)];
+       self.resultLb = [[UILabel alloc] initWithFrame:CGRectMake(w / 4.0, 0, w / 2.0, h)];
        [self addSubview:self.resultLb];
        self.resultLb.backgroundColor = [UIColor whiteColor];
        _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
        [self addSubview:_resultLb];
        _resultLb.textColor = [UIColor blackColor];
-       
+       _resultLb.textAlignment = NSTextAlignmentCenter;
        
        //+
-       self.addBtn = [[UIButton alloc] initWithFrame:CGRectMake(btnW + labelW, 0, btnW, h)];
+       self.addBtn = [[UIButton alloc] initWithFrame:CGRectMake(w * 3 / 4, 0, w / 4.0, h)];
        [self addSubview:self.addBtn];
        [self.addBtn addTarget:self action:@selector(onAdd:) forControlEvents:UIControlEventTouchUpInside];
        [self.addBtn setTitle:@"+" forState:UIControlStateNormal];
-       [self.addBtn setBackgroundColor:[UIColor cyanColor]];
+       [self.addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+       [self.addBtn setBackgroundColor:[UIColor whiteColor]];
+       self.addBtn.layer.masksToBounds = YES;
+       self.addBtn.layer.borderWidth = 1.0;
+       self.addBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
        
        _buttonClickBlock = nil;
    }
@@ -73,13 +79,13 @@
     if (currentNum < min) {
         currentNum = min;
     }
-    self.resultLb.backgroundColor = [UIColor whiteColor];
     _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
-    [self.resultLb reloadInputViews];
     
     if (_buttonClickBlock != nil) {
         _buttonClickBlock(currentNum);
     }
+    
+    [self.delegate reserveNumChanged:self.resultLb.text];
 }
 
 - (void)onAdd:(UIButton *)btn
@@ -88,13 +94,14 @@
     if (currentNum > max) {
         currentNum = max;
     }
-    self.resultLb.backgroundColor = [UIColor whiteColor];
+    
     _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
-    [self.resultLb reloadInputViews];
     
     if (_buttonClickBlock != nil) {
         _buttonClickBlock(currentNum);
     }
+    
+    [self.delegate reserveNumChanged:self.resultLb.text];
 }
 
 

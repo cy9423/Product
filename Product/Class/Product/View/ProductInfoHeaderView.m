@@ -68,7 +68,7 @@
     [self addSubview:self.pc];
     
     //开启定时器 实现循环滚动
-   // [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(timeRefresh) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(timeRefresh) userInfo:nil repeats:YES];
 }
 
 #pragma mark - 顶部定时器

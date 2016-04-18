@@ -7,15 +7,13 @@
 //
 
 #import "ProductFirstCell.h"
-#import "CYStepper.h"
+
 @implementation ProductFirstCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     
-    CYStepper *ss = [[CYStepper alloc] initWithFrame:CGRectMake(0, 0, 200, 40) With:99 And:0];
-    [self.testView addSubview:ss];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

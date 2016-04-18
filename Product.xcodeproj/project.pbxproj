@@ -13,6 +13,8 @@
 		010CD2AE1CC474BB00AB6620 /* ProductInfoFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010CD2AC1CC474BB00AB6620 /* ProductInfoFirstCell.m */; };
 		010CD2AF1CC474BB00AB6620 /* ProductInfoFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010CD2AD1CC474BB00AB6620 /* ProductInfoFirstCell.xib */; };
 		010CD2B41CC47E4500AB6620 /* CYStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 010CD2B31CC47E4500AB6620 /* CYStepper.m */; };
+		010CD2CD1CC4D01700AB6620 /* ProductInfoSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 010CD2CB1CC4D01700AB6620 /* ProductInfoSecondCell.m */; };
+		010CD2CE1CC4D01700AB6620 /* ProductInfoSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010CD2CC1CC4D01700AB6620 /* ProductInfoSecondCell.xib */; };
 		016C3DA41CBDF00D0007FC8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DA31CBDF00D0007FC8F /* main.m */; };
 		016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DA61CBDF00D0007FC8F /* AppDelegate.m */; };
 		016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DA91CBDF00D0007FC8F /* ViewController.m */; };
@@ -83,6 +85,9 @@
 		010CD2AD1CC474BB00AB6620 /* ProductInfoFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductInfoFirstCell.xib; sourceTree = "<group>"; };
 		010CD2B21CC47E4500AB6620 /* CYStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYStepper.h; path = Product/Class/Product/View/CYStepper.h; sourceTree = SOURCE_ROOT; };
 		010CD2B31CC47E4500AB6620 /* CYStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYStepper.m; path = Product/Class/Product/View/CYStepper.m; sourceTree = SOURCE_ROOT; };
+		010CD2CA1CC4D01700AB6620 /* ProductInfoSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoSecondCell.h; sourceTree = "<group>"; };
+		010CD2CB1CC4D01700AB6620 /* ProductInfoSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoSecondCell.m; sourceTree = "<group>"; };
+		010CD2CC1CC4D01700AB6620 /* ProductInfoSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductInfoSecondCell.xib; sourceTree = "<group>"; };
 		016C3D9F1CBDF00D0007FC8F /* Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016C3DA31CBDF00D0007FC8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		016C3DA51CBDF00D0007FC8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -436,6 +441,9 @@
 				010CD2AB1CC474BB00AB6620 /* ProductInfoFirstCell.h */,
 				010CD2AC1CC474BB00AB6620 /* ProductInfoFirstCell.m */,
 				010CD2AD1CC474BB00AB6620 /* ProductInfoFirstCell.xib */,
+				010CD2CA1CC4D01700AB6620 /* ProductInfoSecondCell.h */,
+				010CD2CB1CC4D01700AB6620 /* ProductInfoSecondCell.m */,
+				010CD2CC1CC4D01700AB6620 /* ProductInfoSecondCell.xib */,
 				016C3E061CBE28930007FC8F /* Model */,
 			);
 			path = View;
@@ -597,6 +605,7 @@
 				016C3DB21CBDF00D0007FC8F /* LaunchScreen.storyboard in Resources */,
 				010CD2AA1CC469C300AB6620 /* ProductInfoHeaderView.xib in Resources */,
 				010CD2AF1CC474BB00AB6620 /* ProductInfoFirstCell.xib in Resources */,
+				010CD2CE1CC4D01700AB6620 /* ProductInfoSecondCell.xib in Resources */,
 				016C3DF41CBDF0840007FC8F /* Assets.xcassets in Resources */,
 				016C3DAD1CBDF00D0007FC8F /* Main.storyboard in Resources */,
 				016C3E2C1CBF82AD0007FC8F /* ProductSecondCell.xib in Resources */,
@@ -690,6 +699,7 @@
 				016C3E261CBF77770007FC8F /* ProductFirstCell.m in Sources */,
 				010CD2AE1CC474BB00AB6620 /* ProductInfoFirstCell.m in Sources */,
 				016C3DEF1CBDF0250007FC8F /* RecruitViewController.m in Sources */,
+				010CD2CD1CC4D01700AB6620 /* ProductInfoSecondCell.m in Sources */,
 				016C3E4F1CC0AAB30007FC8F /* SelectCollectionViewCell.m in Sources */,
 				016C3E461CC08F9C0007FC8F /* ProductCategoryViewController.m in Sources */,
 				016C3E2B1CBF82AD0007FC8F /* ProductSecondCell.m in Sources */,
