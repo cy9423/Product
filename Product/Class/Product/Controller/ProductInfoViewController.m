@@ -49,7 +49,7 @@
     self.toolbarItems = arr;
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
     self.navigationController.toolbarHidden = YES;
 }

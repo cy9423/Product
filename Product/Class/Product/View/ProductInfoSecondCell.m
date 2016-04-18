@@ -29,7 +29,7 @@
 
 - (void)reserveNumChanged:(NSString *)str
 {
-    NSLog(@"%@",str);
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
