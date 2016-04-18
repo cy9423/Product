@@ -8,6 +8,7 @@
 
 #import "ProductCategoryViewController.h"
 #import "ProductCategoryCell.h"
+#import "ProductInfoViewController.h"
 
 @interface ProductCategoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -53,6 +54,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ProductCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdCategory" forIndexPath:indexPath];
+    
+    cell.block = ^(){
+      
+        ProductInfoViewController *pvc = [[ProductInfoViewController alloc] init];
+        
+        [self.navigationController pushViewController:pvc animated:YES];
+        
+        NSLog(@"1");
+        
+    };
     
     [cell updateCellWith:dataArr];
     

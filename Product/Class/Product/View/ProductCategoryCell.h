@@ -18,4 +18,6 @@
 
 - (void)updateCellWith:(NSArray *)arr;
 
+@property (nonatomic,copy) void(^block)();
+
 @end

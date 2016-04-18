@@ -164,15 +164,10 @@
 //}
 
 
-//#pragma mark -
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    //点击Item的时候调用这个方法
-//    NextViewController * nc  = [[NextViewController alloc] init];
-//    nc.imgName = self.dataArr[indexPath.row];
-//    nc.a = indexPath.row;
-//    [self.navigationController pushViewController:nc animated:NO];
-//    
-//}
+#pragma mark -
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.block();
+}
 
 @end
