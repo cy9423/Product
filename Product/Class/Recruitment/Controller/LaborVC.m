@@ -25,7 +25,6 @@
         [_addlab setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_addlab setTitle:@"下单" forState:UIControlStateNormal];
         [_addlab addTarget:self action:@selector(pushAdd:) forControlEvents:UIControlEventTouchUpInside];
-        
         _cellheight = 40;
     }
     return self;

@@ -11,4 +11,5 @@
 @interface LaborCell : UITableViewCell
 @property(nonatomic, retain)LaborCellModel *mod;
 @property(nonatomic, assign)NSInteger height;
+//@property(nonatomic, assign)
 @end

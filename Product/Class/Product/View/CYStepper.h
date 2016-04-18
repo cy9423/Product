@@ -13,7 +13,7 @@
 @property (nonatomic,strong) UIButton *addBtn;
 @property (nonatomic,strong) UIButton *decBtn;
 @property (nonatomic,strong) UILabel *resultLb;
+@property (nonatomic, copy) void(^buttonClickBlock)(int currentNum);
 
 - (instancetype)initWithFrame:(CGRect)frame With:(int)Max And:(int)Min;
-
 @end

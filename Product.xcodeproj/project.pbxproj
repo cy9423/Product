@@ -51,6 +51,8 @@
 		B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9701CC45EAD003E2D11 /* LaborVC.m */; };
 		B004C9761CC45EC2003E2D11 /* PushAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9731CC45EC2003E2D11 /* PushAddVC.m */; };
 		B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9751CC45EC2003E2D11 /* WorkerVC.m */; };
+		B004C99F1CC4942A003E2D11 /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C99E1CC4942A003E2D11 /* ShopModel.m */; };
+		B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9A11CC4945C003E2D11 /* ShopCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,10 @@
 		B004C9731CC45EC2003E2D11 /* PushAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAddVC.m; sourceTree = "<group>"; };
 		B004C9741CC45EC2003E2D11 /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
 		B004C9751CC45EC2003E2D11 /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
+		B004C99D1CC4942A003E2D11 /* ShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopModel.h; sourceTree = "<group>"; };
+		B004C99E1CC4942A003E2D11 /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
+		B004C9A01CC4945C003E2D11 /* ShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCell.h; sourceTree = "<group>"; };
+		B004C9A11CC4945C003E2D11 /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +410,8 @@
 		016C3DF51CBE12D40007FC8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B004C99D1CC4942A003E2D11 /* ShopModel.h */,
+				B004C99E1CC4942A003E2D11 /* ShopModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +419,8 @@
 		016C3DF61CBE12D40007FC8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B004C9A01CC4945C003E2D11 /* ShopCell.h */,
+				B004C9A11CC4945C003E2D11 /* ShopCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,6 +665,7 @@
 			files = (
 				016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */,
 				B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */,
+				B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
 				B004C9761CC45EC2003E2D11 /* PushAddVC.m in Sources */,
@@ -668,6 +679,7 @@
 				016C3DA41CBDF00D0007FC8F /* main.m in Sources */,
 				016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */,
 				B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */,
+				B004C99F1CC4942A003E2D11 /* ShopModel.m in Sources */,
 				B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
 				016C3E531CC0DD100007FC8F /* ProductMenuViewController.m in Sources */,

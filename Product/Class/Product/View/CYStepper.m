@@ -26,8 +26,7 @@
     // Drawing code
 }
 */
-- (instancetype)initWithFrame:(CGRect)frame With:(int)Max And:(int)Min
-{
+- (instancetype)initWithFrame:(CGRect)frame With:(int)Max And:(int)Min {
    if(self = [super initWithFrame:frame])
    {
        max = Max;
@@ -63,7 +62,7 @@
        [self.addBtn setTitle:@"+" forState:UIControlStateNormal];
        [self.addBtn setBackgroundColor:[UIColor cyanColor]];
        
-       
+       _buttonClickBlock = nil;
    }
     return self;
 }
@@ -77,6 +76,10 @@
     self.resultLb.backgroundColor = [UIColor whiteColor];
     _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
     [self.resultLb reloadInputViews];
+    
+    if (_buttonClickBlock != nil) {
+        _buttonClickBlock(currentNum);
+    }
 }
 
 - (void)onAdd:(UIButton *)btn
@@ -88,6 +91,10 @@
     self.resultLb.backgroundColor = [UIColor whiteColor];
     _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
     [self.resultLb reloadInputViews];
+    
+    if (_buttonClickBlock != nil) {
+        _buttonClickBlock(currentNum);
+    }
 }
 
 

@@ -10,8 +10,4 @@
 
 @interface ShopViewController : UIViewController
 
-
-
-
-
 @end

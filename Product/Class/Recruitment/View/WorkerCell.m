@@ -65,7 +65,7 @@
 
 - (void)setMod:(WorkerCellModel *)mod{
     _mod = mod;
-    _title.text = [NSString stringWithFormat:@"张%d", arc4random()%100];
+    _title.text = [NSString stringWithFormat:@"%d", arc4random()%100];
     float grade = arc4random()%100/10.f;
     NSString *string = [[NSString alloc]init];
     for (int i=0; i<5; i++) {
