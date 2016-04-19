@@ -51,10 +51,11 @@
 		B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9681CC45CA2003E2D11 /* LaborCell.m */; };
 		B004C96E1CC45CA2003E2D11 /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C96A1CC45CA2003E2D11 /* WorkerCell.m */; };
 		B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9701CC45EAD003E2D11 /* LaborVC.m */; };
-		B004C9761CC45EC2003E2D11 /* PushAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9731CC45EC2003E2D11 /* PushAddVC.m */; };
 		B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9751CC45EC2003E2D11 /* WorkerVC.m */; };
 		B004C99F1CC4942A003E2D11 /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C99E1CC4942A003E2D11 /* ShopModel.m */; };
 		B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9A11CC4945C003E2D11 /* ShopCell.m */; };
+		B00EB1EF1CC62213009F81BF /* AddLaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B00EB1ED1CC62213009F81BF /* AddLaborVC.m */; };
+		B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,14 +157,15 @@
 		B004C96A1CC45CA2003E2D11 /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
 		B004C96F1CC45EAD003E2D11 /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborVC.h; sourceTree = "<group>"; };
 		B004C9701CC45EAD003E2D11 /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborVC.m; sourceTree = "<group>"; };
-		B004C9721CC45EC2003E2D11 /* PushAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAddVC.h; sourceTree = "<group>"; };
-		B004C9731CC45EC2003E2D11 /* PushAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAddVC.m; sourceTree = "<group>"; };
 		B004C9741CC45EC2003E2D11 /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
 		B004C9751CC45EC2003E2D11 /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
 		B004C99D1CC4942A003E2D11 /* ShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopModel.h; sourceTree = "<group>"; };
 		B004C99E1CC4942A003E2D11 /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
 		B004C9A01CC4945C003E2D11 /* ShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCell.h; sourceTree = "<group>"; };
 		B004C9A11CC4945C003E2D11 /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
+		B00EB1EC1CC62213009F81BF /* AddLaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLaborVC.h; sourceTree = "<group>"; };
+		B00EB1ED1CC62213009F81BF /* AddLaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLaborVC.m; sourceTree = "<group>"; };
+		B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLaborVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,10 +378,11 @@
 				016C3DE61CBDF0250007FC8F /* RecruitViewController.m */,
 				B004C96F1CC45EAD003E2D11 /* LaborVC.h */,
 				B004C9701CC45EAD003E2D11 /* LaborVC.m */,
-				B004C9721CC45EC2003E2D11 /* PushAddVC.h */,
-				B004C9731CC45EC2003E2D11 /* PushAddVC.m */,
 				B004C9741CC45EC2003E2D11 /* WorkerVC.h */,
 				B004C9751CC45EC2003E2D11 /* WorkerVC.m */,
+				B00EB1EC1CC62213009F81BF /* AddLaborVC.h */,
+				B00EB1ED1CC62213009F81BF /* AddLaborVC.m */,
+				B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				016C3E2C1CBF82AD0007FC8F /* ProductSecondCell.xib in Resources */,
 				016C3E271CBF77770007FC8F /* ProductFirstCell.xib in Resources */,
 				016C3E311CBF82BF0007FC8F /* ProductDoubleCell.xib in Resources */,
+				B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */,
 				016C3E361CBF82FF0007FC8F /* ProductSingularCell.xib in Resources */,
 				016C3E4B1CC095D50007FC8F /* ProductCategoryCell.xib in Resources */,
 				016C3E501CC0AAB30007FC8F /* SelectCollectionViewCell.xib in Resources */,
@@ -677,9 +681,9 @@
 				B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
-				B004C9761CC45EC2003E2D11 /* PushAddVC.m in Sources */,
 				B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */,
 				010CD2B41CC47E4500AB6620 /* CYStepper.m in Sources */,
+				B00EB1EF1CC62213009F81BF /* AddLaborVC.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,

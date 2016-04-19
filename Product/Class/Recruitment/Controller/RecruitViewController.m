@@ -16,6 +16,7 @@
 @end
 
 @implementation RecruitViewController
+static int i = 64;
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -37,6 +38,8 @@
                                                    NSForegroundColorAttributeName: [UIColor lightTextColor]};
         [_recruit setTitleTextAttributes:unselectedTextAttributes forState:UIControlStateNormal];
         
+        _labor = [[LaborVC alloc]init];
+        _worker = [[WorkerVC alloc]init];
     }
     return self;
 }
@@ -45,6 +48,8 @@
     [super viewWillAppear:animated];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.navigationController.navigationBar addSubview:_recruit];
+    [_labor.view setFrame:CGRectMake(0, i, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    [_worker.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -55,12 +60,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    _labor = [[LaborVC alloc]init];
-    [_labor.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
-    _worker = [[WorkerVC alloc]init];
-    [_worker.view setFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
-    
+    [self.view addSubview:_worker.view];
+    [self addChildViewController:_worker];
     [self.view addSubview:_labor.view];
     [self addChildViewController:_labor];
 }
@@ -69,19 +70,16 @@
     switch (segment.selectedSegmentIndex) {
         case 0:
         {
-            [self addChildViewController:_labor];
             [self transitionFromViewController:_worker toViewController:_labor duration:0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finish){
-                [_worker removeFromParentViewController];
             }];
             break;
         }
             
         case 1:
         {
-            [self addChildViewController:_worker];
             [self transitionFromViewController:_labor toViewController:_worker duration:0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finish){
-                [_labor removeFromParentViewController];
             }];
+            i = 0;
             break;
         }
     }
@@ -102,4 +100,3 @@
  // Pass the selected object to the new view controller.
  }
  */
-

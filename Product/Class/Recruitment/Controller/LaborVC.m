@@ -9,7 +9,7 @@
 #import "LaborVC.h"
 #import "LaborCell.h"
 #import "LaborCellModel.h"
-#import "PushAddVC.h"
+#import "AddLaborVC.h"
 @interface LaborVC()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, retain)UIButton *addlab;//下单按钮
 @property(nonatomic, retain)UITableView *table;//列表
@@ -32,7 +32,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.navigationController.navigationBar addSubview:_addlab];
 }
 
@@ -92,7 +91,7 @@
 }
 
 - (void)pushAdd:(UIBarButtonItem *)button {
-    PushAddVC *add = [[PushAddVC alloc]init];
+    AddLaborVC *add = [[AddLaborVC alloc]init];
     [self.navigationController pushViewController:add animated:YES];
 }
 

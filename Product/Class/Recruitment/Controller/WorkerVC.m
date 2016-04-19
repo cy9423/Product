@@ -25,7 +25,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)viewDidLoad {
@@ -33,7 +32,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     //创建tableview
-    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-112) style:UITableViewStylePlain];
+    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-40) style:UITableViewStylePlain];
     _table.backgroundColor = [UIColor groupTableViewBackgroundColor];
     _table.delegate = self;
     _table.dataSource = self;
@@ -71,4 +70,3 @@
     // Dispose of any resources that can be recreated.
 }
 @end
-
