@@ -15,17 +15,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-Tb-kYV">
-                        <rect key="frame" x="0.0" y="0.0" width="207" height="199.5"/>
-                        <color key="backgroundColor" red="0.78635829873690311" green="1" blue="0.89470898440124014" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-Tw-AAD">
                         <rect key="frame" x="207" y="0.0" width="207" height="100"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6_03" translatesAutoresizingMaskIntoConstraints="NO" id="z6N-0N-VJt">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="100"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.70349712841162415" blue="0.55075342463377741" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="z6N-0N-VJt" firstAttribute="top" secondItem="esZ-Tw-AAD" secondAttribute="top" id="CIO-zy-NxX"/>
+                            <constraint firstAttribute="bottom" secondItem="z6N-0N-VJt" secondAttribute="bottom" id="J4f-J4-5Ca"/>
+                            <constraint firstAttribute="trailing" secondItem="z6N-0N-VJt" secondAttribute="trailing" id="b8T-0t-MHh"/>
+                            <constraint firstItem="z6N-0N-VJt" firstAttribute="leading" secondItem="esZ-Tw-AAD" secondAttribute="leading" id="vgE-Nv-2lW"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="er2-f7-lmO">
                         <rect key="frame" x="207" y="100" width="207" height="99.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6_04" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-SA-rPw">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="99.5"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.59362427580477395" blue="0.62988182955008987" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cQg-SA-rPw" secondAttribute="trailing" id="IQz-PV-12l"/>
+                            <constraint firstAttribute="bottom" secondItem="cQg-SA-rPw" secondAttribute="bottom" id="J0w-r7-Hu6"/>
+                            <constraint firstItem="cQg-SA-rPw" firstAttribute="leading" secondItem="er2-f7-lmO" secondAttribute="leading" id="YtX-4A-6yq"/>
+                            <constraint firstItem="cQg-SA-rPw" firstAttribute="top" secondItem="er2-f7-lmO" secondAttribute="top" id="mqR-iZ-wt5"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide_Villas" translatesAutoresizingMaskIntoConstraints="NO" id="Ciy-GY-Oub">
+                        <rect key="frame" x="30" y="40" width="146" height="118"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-Tb-kYV">
+                        <rect key="frame" x="0.0" y="0.0" width="207" height="199.5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
                 <constraints>
@@ -43,7 +68,12 @@
                     <constraint firstAttribute="trailing" secondItem="esZ-Tw-AAD" secondAttribute="trailing" id="uQO-nu-Ksa"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="405" y="195"/>
+            <point key="canvasLocation" x="398" y="241"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="6_03" width="187" height="81"/>
+        <image name="6_04" width="187" height="81"/>
+        <image name="guide_Villas" width="220" height="220"/>
+    </resources>
 </document>

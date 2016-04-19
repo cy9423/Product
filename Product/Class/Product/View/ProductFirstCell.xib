@@ -15,25 +15,62 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="299.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUC-eY-wWq">
-                        <rect key="frame" x="0.0" y="0.0" width="207" height="150"/>
-                        <color key="backgroundColor" red="0.97848295797650375" green="0.58415569073415075" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaS-dR-PnJ">
                         <rect key="frame" x="207" y="75" width="207" height="75"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_loginTop_pic" translatesAutoresizingMaskIntoConstraints="NO" id="6Mu-4T-7uA">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="75"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.68157481173478995" green="1" blue="0.898972239664793" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-Ya-Uwz">
                         <rect key="frame" x="207" y="0.0" width="207" height="75"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_loginTop_pic" translatesAutoresizingMaskIntoConstraints="NO" id="0Jp-83-GCh">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="75"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.54388060711274244" blue="0.79733471901988417" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Jp-83-GCh" firstAttribute="leading" secondItem="XSF-Ya-Uwz" secondAttribute="leading" id="FXJ-i5-aiR"/>
+                            <constraint firstAttribute="bottom" secondItem="0Jp-83-GCh" secondAttribute="bottom" id="Vg2-Vo-P8q"/>
+                            <constraint firstItem="0Jp-83-GCh" firstAttribute="top" secondItem="XSF-Ya-Uwz" secondAttribute="top" id="YVc-Ya-ri6"/>
+                            <constraint firstAttribute="trailing" secondItem="0Jp-83-GCh" secondAttribute="trailing" id="h2s-Hu-SkF"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87C-aN-97c">
                         <rect key="frame" x="0.0" y="150" width="414" height="149.5"/>
-                        <color key="backgroundColor" red="1" green="0.89640570608563996" blue="0.76194822136363216" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide_ChineseStyle" translatesAutoresizingMaskIntoConstraints="NO" id="j5C-B7-cdl">
+                                <rect key="frame" x="32" y="35" width="88" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide_towRoom" translatesAutoresizingMaskIntoConstraints="NO" id="aS5-sZ-W5Y">
+                                <rect key="frame" x="163" y="35" width="88" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide_threeRoom" translatesAutoresizingMaskIntoConstraints="NO" id="ZxN-Qv-Ude">
+                                <rect key="frame" x="301" y="35" width="88" height="80"/>
+                            </imageView>
+                        </subviews>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDD-Ku-6gm">
                         <rect key="frame" x="-93" y="-150" width="600" height="600"/>
                         <color key="backgroundColor" red="0.25484799697605431" green="0.85685015307698142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUC-eY-wWq">
+                        <rect key="frame" x="0.0" y="0.0" width="207" height="150"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_noCover3" translatesAutoresizingMaskIntoConstraints="NO" id="93q-EQ-Xc1">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="150"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97848295797650375" green="0.58415569073415075" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="93q-EQ-Xc1" secondAttribute="trailing" id="0F9-7C-fZG"/>
+                            <constraint firstItem="93q-EQ-Xc1" firstAttribute="leading" secondItem="dUC-eY-wWq" secondAttribute="leading" id="G6d-QA-yEU"/>
+                            <constraint firstItem="93q-EQ-Xc1" firstAttribute="top" secondItem="dUC-eY-wWq" secondAttribute="top" id="kEK-ec-eJt"/>
+                            <constraint firstAttribute="bottom" secondItem="93q-EQ-Xc1" secondAttribute="bottom" id="zrs-Pq-32r"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -66,4 +103,11 @@
             <point key="canvasLocation" x="309" y="-236"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="bg_loginTop_pic" width="375" height="210"/>
+        <image name="bg_noCover3" width="375" height="290"/>
+        <image name="guide_ChineseStyle" width="220" height="220"/>
+        <image name="guide_threeRoom" width="220" height="220"/>
+        <image name="guide_towRoom" width="220" height="220"/>
+    </resources>
 </document>

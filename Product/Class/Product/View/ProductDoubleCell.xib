@@ -17,15 +17,42 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-Kf-RPG">
                         <rect key="frame" x="0.0" y="0.0" width="207" height="100"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_loginTop_pic" translatesAutoresizingMaskIntoConstraints="NO" id="0Se-0T-Em1">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="100"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.66663312145804632" blue="0.7914790005359007" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Se-0T-Em1" firstAttribute="leading" secondItem="vGm-Kf-RPG" secondAttribute="leading" id="Ggh-Fx-KAf"/>
+                            <constraint firstAttribute="bottom" secondItem="0Se-0T-Em1" secondAttribute="bottom" id="K1B-6K-hZm"/>
+                            <constraint firstAttribute="trailing" secondItem="0Se-0T-Em1" secondAttribute="trailing" id="WL7-yG-aqK"/>
+                            <constraint firstItem="0Se-0T-Em1" firstAttribute="top" secondItem="vGm-Kf-RPG" secondAttribute="top" id="kj0-Gu-cNW"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tW6-tm-AaA">
                         <rect key="frame" x="0.0" y="100" width="207" height="99.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_noCover3" translatesAutoresizingMaskIntoConstraints="NO" id="jz2-dw-PN5">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="99.5"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.65195805367121673" green="1" blue="0.69049172030580974" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jz2-dw-PN5" firstAttribute="leading" secondItem="tW6-tm-AaA" secondAttribute="leading" id="6vW-mQ-E3D"/>
+                            <constraint firstItem="jz2-dw-PN5" firstAttribute="top" secondItem="tW6-tm-AaA" secondAttribute="top" id="FuR-Tu-UOk"/>
+                            <constraint firstAttribute="trailing" secondItem="jz2-dw-PN5" secondAttribute="trailing" id="gzg-fa-4aY"/>
+                            <constraint firstAttribute="bottom" secondItem="jz2-dw-PN5" secondAttribute="bottom" id="qh7-Ft-Jaa"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aX5-3Z-NGZ">
                         <rect key="frame" x="207" y="0.0" width="207" height="199.5"/>
-                        <color key="backgroundColor" red="0.35447935422714594" green="0.47893626318192095" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide_AmericanStyle" translatesAutoresizingMaskIntoConstraints="NO" id="Oz0-1B-Nlv">
+                                <rect key="frame" x="37" y="47" width="132" height="105"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
                 <constraints>
@@ -46,4 +73,9 @@
             <point key="canvasLocation" x="283" y="198"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="bg_loginTop_pic" width="375" height="210"/>
+        <image name="bg_noCover3" width="375" height="290"/>
+        <image name="guide_AmericanStyle" width="220" height="220"/>
+    </resources>
 </document>

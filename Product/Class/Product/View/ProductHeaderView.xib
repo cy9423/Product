@@ -17,13 +17,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYA-cq-3Rs">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-d7-IIO">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜索商品" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-d7-IIO">
                             <rect key="frame" x="10" y="5" width="394" height="30"/>
+                            <color key="backgroundColor" red="0.95294117647058818" green="0.94509803921568625" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" red="0.75026735949907475" green="1" blue="0.75714499609970065" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="PD0-d7-IIO" firstAttribute="top" secondItem="AYA-cq-3Rs" secondAttribute="top" constant="5" id="8eP-cy-beH"/>
                         <constraint firstAttribute="bottom" secondItem="PD0-d7-IIO" secondAttribute="bottom" constant="5" id="LMu-3L-Nze"/>
@@ -34,7 +35,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3C-8y-n3H">
                     <rect key="frame" x="0.0" y="240" width="414" height="80"/>
-                    <color key="backgroundColor" red="1" green="0.6903641310806119" blue="0.90784513761933039" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="pwE-MD-ocW"/>
                     </constraints>

@@ -64,7 +64,7 @@ Sm95b3VuZy/kuZ3pmLMgSllZLTUwWVMyNxDmmbrog73nlLXljovlipvplIU
                 <outlet property="pd_InfoScrollView" destination="1Oe-jI-H8Y" id="mr5-e7-WjE"/>
                 <outlet property="pd_nameTF" destination="VWm-0d-fyW" id="TeF-hU-jgP"/>
             </connections>
-            <point key="canvasLocation" x="158" y="193.5"/>
+            <point key="canvasLocation" x="235" y="198"/>
         </view>
     </objects>
 </document>
