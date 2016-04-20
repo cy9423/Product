@@ -26,7 +26,7 @@
         _price = [UIButton buttonWithType:UIButtonTypeSystem];
         _price.frame =CGRectMake(SCREEN_WIDTH-50, 10, 50, 25);
         [_price setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_price setTitle:@"总价" forState:UIControlStateNormal];
+        [_price setTitle:@"支付" forState:UIControlStateNormal];
         [_price addTarget:self action:@selector(count:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
@@ -86,6 +86,7 @@
     for (ShopCell *cell in _arr) {
         NSLog(@"%@%d件,单价%@", cell.title.text, cell.num, cell.price.text);
     }
+    [AlipayRequestConfig alipayWithPartner:kPartnerID seller:kSellerAccount tradeNO:[AlipayToolKit genTradeNoWithTime] productName:@"邮票" productDescription:@"全真邮票" amount:@"0.8" notifyURL:kNotifyURL itBPay:@"30m"];
 }
 
 - (void)didReceiveMemoryWarning {
