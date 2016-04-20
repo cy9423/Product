@@ -53,6 +53,7 @@
 		B003C2CB1CC72C5100B5C1C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003C2CA1CC72C5100B5C1C8 /* Foundation.framework */; };
 		B003C2CD1CC72C5F00B5C1C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003C2CC1CC72C5F00B5C1C8 /* UIKit.framework */; };
 		B003C2CF1CC72C6900B5C1C8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003C2CE1CC72C6900B5C1C8 /* SystemConfiguration.framework */; };
+		B003C2D31CC7331000B5C1C8 /* CYStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = B003C2D21CC7331000B5C1C8 /* CYStepper.m */; };
 		B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9631CC45CA2003E2D11 /* LaborCellModel.m */; };
 		B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9651CC45CA2003E2D11 /* WorkerCellModel.m */; };
 		B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9681CC45CA2003E2D11 /* LaborCell.m */; };
@@ -160,6 +161,8 @@
 		B003C2CA1CC72C5100B5C1C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B003C2CC1CC72C5F00B5C1C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B003C2CE1CC72C6900B5C1C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B003C2D11CC7331000B5C1C8 /* CYStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStepper.h; sourceTree = "<group>"; };
+		B003C2D21CC7331000B5C1C8 /* CYStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYStepper.m; sourceTree = "<group>"; };
 		B004C9621CC45CA2003E2D11 /* LaborCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCellModel.h; sourceTree = "<group>"; };
 		B004C9631CC45CA2003E2D11 /* LaborCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCellModel.m; sourceTree = "<group>"; };
 		B004C9641CC45CA2003E2D11 /* WorkerCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCellModel.h; sourceTree = "<group>"; };
@@ -276,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				016C3DF31CBDF0840007FC8F /* Assets.xcassets */,
+				B003C2D01CC7331000B5C1C8 /* Library */,
 				016C3DD51CBDF0250007FC8F /* Class */,
 				016C3DA51CBDF00D0007FC8F /* AppDelegate.h */,
 				016C3DA61CBDF00D0007FC8F /* AppDelegate.m */,
@@ -496,6 +500,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B003C2D01CC7331000B5C1C8 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B003C2D11CC7331000B5C1C8 /* CYStepper.h */,
+				B003C2D21CC7331000B5C1C8 /* CYStepper.m */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		B004C9611CC45CA2003E2D11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +713,7 @@
 				B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
+				B003C2D31CC7331000B5C1C8 /* CYStepper.m in Sources */,
 				B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */,
 				B00EB1EF1CC62213009F81BF /* AddLaborVC.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
