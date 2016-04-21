@@ -8,22 +8,22 @@
 
 #import "AddLaborVC.h"
 
-@interface AddLaborVC ()<UITextViewDelegate, UITextFieldDelegate>
+@interface AddLaborVC ()<UITextViewDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 @property (strong, nonatomic) IBOutlet UIDatePicker *date;
 @property (strong, nonatomic) IBOutlet UITextField *labTitle;
 @property (strong, nonatomic) IBOutlet UITextView *desc;
 @property (strong, nonatomic) IBOutlet UITextView *addr;
 @property (strong, nonatomic) IBOutlet UITextField *tel;
 @property (strong, nonatomic) IBOutlet UITextField *price;
-
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *desc_con;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *addr_con;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *scoll_con;
-
+@property (strong, nonatomic) IBOutlet UIPickerView *way;
+@property (strong, nonatomic) IBOutlet UIButton *submit;
+@property (strong, nonatomic) NSArray *pickerList;
 @end
 
 @implementation AddLaborVC
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -73,12 +73,23 @@
     _price.borderStyle = UITextBorderStyleRoundedRect;
     _price.font = [UIFont systemFontOfSize:15];
     
+    //下单方式
+    _pickerList = [[NSArray alloc]initWithObjects:@"等待散工接单", @"系统自动匹配", @"指定散工下单", nil];
+    _way.showsSelectionIndicator=YES;
+    _way.dataSource = self;
+    _way.delegate = self;
+    
+    //提交按钮
+    _submit.layer.masksToBounds = YES;
+    _submit.layer.cornerRadius = 25;
+    _submit.layer.borderWidth = 1;
+    _submit.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
     //注册键盘出现的通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
-    
     //注册键盘消失的通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillBeHidden:)
@@ -97,20 +108,31 @@
     }
     return YES;
 }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];//释放第一响应
+    return YES;
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return _pickerList.count;
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {// 返回选中的行
+
+}
+-(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {//将数组中数值添加到滚动的那个显示栏上
+    return [_pickerList objectAtIndex:row];
+}
 
 - (void)keyboardWasShown:(NSNotification*)aNotification {
     //键盘高度
     CGRect keyBoardFrame = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     _scoll_con.constant = keyBoardFrame.size.height;
 }
-
 -(void)keyboardWillBeHidden:(NSNotification*)aNotification {
     _scoll_con.constant = 0;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];//释放第一响应
-    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -59,11 +59,12 @@
 
 - (void)setMod:(ShopModel *)mod{
     _mod = mod;
-    _title.text = [NSString stringWithFormat:@"九阳JYY-%d智能电压力锅", (arc4random()%1000000)];
-    _desc.text = @"颜色分类：土豪金";
+    _title.text = [NSString stringWithFormat:@"A.O.Smith/史密斯 %d升 防煤气中毒 宽频恒温燃气热水器%c%c%c%d-%c%d", (arc4random()%99+1), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%99+1), (arc4random()%26+65), (arc4random()%8+1)];
+    _desc.text = [NSString stringWithFormat:@"颜色分类：土豪金   已售%d件", (arc4random()%999)+1];
     
     float price_s = arc4random()%100000/100.f;
     _price.text = [NSString stringWithFormat:@"￥%.2f", price_s];
+    [_img setImage:[UIImage imageNamed:@"smith.jpg"]];
     _height = 125;
 }
 

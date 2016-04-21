@@ -60,7 +60,7 @@
 
 //判断cell种类
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LaborCellModel *mod = [[LaborCellModel alloc]init];
+    LaborCellModel *mod = [LaborCellModel makeValue];
     //    LaborCellModel *mod = [LaborCellModel modWithDic:self.modArr[indexPath.row]];
     //    if ([mod.template_a isEqualToString:@"pic1"]) {
     LaborCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LaborCell"];

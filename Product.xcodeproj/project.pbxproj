@@ -78,6 +78,8 @@
 		B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9A11CC4945C003E2D11 /* ShopCell.m */; };
 		B00EB1EF1CC62213009F81BF /* AddLaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B00EB1ED1CC62213009F81BF /* AddLaborVC.m */; };
 		B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */; };
+		B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD231CC86D6B00627C74 /* sinostar.jpg */; };
+		B020DD261CC86D6B00627C74 /* smith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD241CC86D6B00627C74 /* smith.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +299,8 @@
 		B00EB1EC1CC62213009F81BF /* AddLaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLaborVC.h; sourceTree = "<group>"; };
 		B00EB1ED1CC62213009F81BF /* AddLaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLaborVC.m; sourceTree = "<group>"; };
 		B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLaborVC.xib; sourceTree = "<group>"; };
+		B020DD231CC86D6B00627C74 /* sinostar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sinostar.jpg; sourceTree = "<group>"; };
+		B020DD241CC86D6B00627C74 /* smith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smith.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				016C3DF31CBDF0840007FC8F /* Assets.xcassets */,
+				B020DD221CC86D6B00627C74 /* Images */,
 				B003C2D01CC7331000B5C1C8 /* Library */,
 				016C3DD51CBDF0250007FC8F /* Class */,
 				016C3DA51CBDF00D0007FC8F /* AppDelegate.h */,
@@ -790,6 +795,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B020DD221CC86D6B00627C74 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B020DD231CC86D6B00627C74 /* sinostar.jpg */,
+				B020DD241CC86D6B00627C74 /* smith.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -908,8 +922,10 @@
 				016C3E311CBF82BF0007FC8F /* ProductDoubleCell.xib in Resources */,
 				B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */,
 				016C3E361CBF82FF0007FC8F /* ProductSingularCell.xib in Resources */,
+				B020DD261CC86D6B00627C74 /* smith.jpg in Resources */,
 				016C3E4B1CC095D50007FC8F /* ProductCategoryCell.xib in Resources */,
 				016C3E501CC0AAB30007FC8F /* SelectCollectionViewCell.xib in Resources */,
+				B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */,
 				016C3E221CBF73EB0007FC8F /* ProductHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

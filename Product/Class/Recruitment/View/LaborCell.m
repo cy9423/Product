@@ -73,10 +73,11 @@
 
 - (void)setMod:(LaborCellModel *)mod{
     _mod = mod;
-    _title.text = @"gfdrhjtkmhio";
+    _title.text = [NSString stringWithFormat:@"%c%d区   %c%c%c%c%c%c公司需要散工%d名制造%c%c－%d型电压力锅", (arc4random()%26+65), (arc4random()%15), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%26+65), (arc4random()%10+1), (arc4random()%26+65), (arc4random()%26+97), (arc4random()%900+100)];
     _date.text = @"时间：2016-4-11至2016-4-18";
-    _pay.text = [NSString stringWithFormat:@"￥%d", (arc4random()%100000)];
+    _pay.text = [NSString stringWithFormat:@"￥%d", (arc4random()%99999)+1];
     _addr.text = [NSString stringWithFormat:@"傅家庄国际村%d", (arc4random()%1000)];
+    [_img setImage:[UIImage imageNamed:@"sinostar.jpg"]];
 }
 
 @end

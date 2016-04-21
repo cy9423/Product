@@ -71,16 +71,24 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return _cellheight;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;
 }
-
-
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UILabel *headerView = [[UILabel alloc]initWithFrame:CGRectMake(35, 5, SCREEN_WIDTH, 25)];
+    headerView.textColor = [UIColor redColor];
+    headerView.text = @"A.O.Smith";
+    UIView *headerBack = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+    headerBack.backgroundColor = [UIColor whiteColor];
+    [headerBack addSubview:headerView];
+    return headerBack;
+}
 //按钮的点击事件
 - (void)count:(UIBarButtonItem *)button {
     for (ShopCell *cell in _arr) {
