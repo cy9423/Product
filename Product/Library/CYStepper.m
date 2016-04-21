@@ -14,11 +14,9 @@
     int min;
     int currentNum;
 }
-
 @end
 
 @implementation CYStepper
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -36,76 +34,80 @@
        
        float w = frame.size.width;
        float h = frame.size.height;
+       
+       self.layer.masksToBounds = YES;
+       self.layer.cornerRadius = h / 4.0;
+       self.layer.borderWidth = 1.0;
+       self.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
        //-
-       self.decBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, w / 4.0, h)];
-       [self addSubview:self.decBtn];
+       self.decBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, h, h)];
        [self.decBtn setTitle:@"-" forState:UIControlStateNormal];
        [self.decBtn addTarget:self action:@selector(onDec:) forControlEvents:UIControlEventTouchUpInside];
        [self.decBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-       [self.decBtn setBackgroundColor:[UIColor whiteColor]];
-       self.decBtn.layer.masksToBounds = YES;
-       self.decBtn.layer.borderWidth = 1.0;
-       self.decBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+       [self.decBtn setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
        
        //=
-       self.resultLb = [[UILabel alloc] initWithFrame:CGRectMake(w / 4.0, 0, w / 2.0, h)];
-       [self addSubview:self.resultLb];
+       self.resultLb = [[UILabel alloc] initWithFrame:CGRectMake(h , 0, w - h *2, h)];
        self.resultLb.backgroundColor = [UIColor whiteColor];
        _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
-       [self addSubview:_resultLb];
        _resultLb.textColor = [UIColor blackColor];
        _resultLb.textAlignment = NSTextAlignmentCenter;
        
        //+
-       self.addBtn = [[UIButton alloc] initWithFrame:CGRectMake(w * 3 / 4, 0, w / 4.0, h)];
-       [self addSubview:self.addBtn];
+       self.addBtn = [[UIButton alloc] initWithFrame:CGRectMake(w - h, 0, h, h)];
        [self.addBtn addTarget:self action:@selector(onAdd:) forControlEvents:UIControlEventTouchUpInside];
        [self.addBtn setTitle:@"+" forState:UIControlStateNormal];
        [self.addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-       [self.addBtn setBackgroundColor:[UIColor whiteColor]];
+       [self.addBtn setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
        self.addBtn.layer.masksToBounds = YES;
-       self.addBtn.layer.borderWidth = 1.0;
-       self.addBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
        
-       _buttonClickBlock = nil;
+       [self addSubview:self.decBtn];
+       [self addSubview:self.addBtn];
+       [self addSubview:self.resultLb];
    }
     return self;
 }
 
-- (void)onDec:(UIButton *)btn
-{
+- (void)onDec:(UIButton *)btn {
     currentNum --;
-    if (currentNum < min) {
+    if (currentNum <= min) {
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor lightGrayColor]];
         currentNum = min;
+    }else{
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+        [_addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_addBtn setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     }
     _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
-    
-    if (_buttonClickBlock != nil) {
-        _buttonClickBlock(currentNum);
-    }
-    
-    [self.delegate reserveNumChanged:self.resultLb.text];
+    [self.delegate reserveNumChanged:currentNum];
 }
 
-- (void)onAdd:(UIButton *)btn
-{
+- (void)onAdd:(UIButton *)btn {
     currentNum ++;
-    if (currentNum > max) {
+    if (currentNum >= max) {
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor lightGrayColor]];
         currentNum = max;
+    }else{
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+        [_decBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_decBtn setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     }
-    
     _resultLb.text = [NSString stringWithFormat:@"%d",currentNum];
-    
-    if (_buttonClickBlock != nil) {
-        _buttonClickBlock(currentNum);
-    }
-    
-    [self.delegate reserveNumChanged:self.resultLb.text];
+    [self.delegate reserveNumChanged:currentNum];
 }
 
-
-
-
-
+- (void)layoutSubviews{
+    if (currentNum == min) {
+        [_decBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_decBtn setBackgroundColor:[UIColor lightGrayColor]];
+    }else if (currentNum == max){
+        [_addBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_addBtn setBackgroundColor:[UIColor lightGrayColor]];
+    }
+}
 @end

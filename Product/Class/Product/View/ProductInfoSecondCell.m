@@ -27,7 +27,7 @@
     
 }
 
-- (void)reserveNumChanged:(NSString *)str
+- (void)reserveNumChanged:(int)num
 {
     
 }

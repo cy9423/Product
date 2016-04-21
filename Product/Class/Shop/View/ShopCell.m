@@ -8,8 +8,7 @@
 
 #import "ShopCell.h"
 #import "CYStepper.h"
-@interface ShopCell()
-
+@interface ShopCell()<NumChangedDelegate>
 @property(nonatomic, retain)UIImageView *img;//图片
 @property(nonatomic, retain)UILabel *desc;//描述
 @property(nonatomic, retain)CYStepper *step;//计数器
@@ -40,6 +39,7 @@
         [self.contentView addSubview:_price];
         
         _step = [[CYStepper alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-125, 80, 100, 30) With:10 And:1];
+        _step.delegate = self;
         [self.contentView addSubview:_step];
         
     }
@@ -59,16 +59,16 @@
 
 - (void)setMod:(ShopModel *)mod{
     _mod = mod;
-    _title.text = @"九阳JYY-50YS27智能电压力锅";
+    _title.text = [NSString stringWithFormat:@"九阳JYY-%d智能电压力锅", (arc4random()%1000000)];
     _desc.text = @"颜色分类：土豪金";
     
     float price_s = arc4random()%100000/100.f;
     _price.text = [NSString stringWithFormat:@"￥%.2f", price_s];
-    __weak typeof(self) weakSelf = self;
-    _step.buttonClickBlock = ^(int currentNum){
-        weakSelf.num = currentNum;
-    };
     _height = 125;
+}
+
+- (void)reserveNumChanged:(int)num{
+    _num = num;
 }
 
 @end
