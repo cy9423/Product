@@ -80,6 +80,8 @@
 		B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */; };
 		B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD231CC86D6B00627C74 /* sinostar.jpg */; };
 		B020DD261CC86D6B00627C74 /* smith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD241CC86D6B00627C74 /* smith.jpg */; };
+		B020DD281CC8BC4700627C74 /* LabDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = B020DD271CC8BC4700627C74 /* LabDetails.xib */; };
+		B020DD2B1CC8BC8D00627C74 /* LabDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B020DD2A1CC8BC8D00627C74 /* LabDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +303,9 @@
 		B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLaborVC.xib; sourceTree = "<group>"; };
 		B020DD231CC86D6B00627C74 /* sinostar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sinostar.jpg; sourceTree = "<group>"; };
 		B020DD241CC86D6B00627C74 /* smith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smith.jpg; sourceTree = "<group>"; };
+		B020DD271CC8BC4700627C74 /* LabDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabDetails.xib; sourceTree = "<group>"; };
+		B020DD291CC8BC8D00627C74 /* LabDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabDetails.h; sourceTree = "<group>"; };
+		B020DD2A1CC8BC8D00627C74 /* LabDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -791,6 +796,9 @@
 				B004C9681CC45CA2003E2D11 /* LaborCell.m */,
 				B004C9691CC45CA2003E2D11 /* WorkerCell.h */,
 				B004C96A1CC45CA2003E2D11 /* WorkerCell.m */,
+				B020DD271CC8BC4700627C74 /* LabDetails.xib */,
+				B020DD291CC8BC8D00627C74 /* LabDetails.h */,
+				B020DD2A1CC8BC8D00627C74 /* LabDetails.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -910,6 +918,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B020DD281CC8BC4700627C74 /* LabDetails.xib in Resources */,
 				B003C3481CC7431200B5C1C8 /* AlipaySDK.bundle in Resources */,
 				016C3DB21CBDF00D0007FC8F /* LaunchScreen.storyboard in Resources */,
 				010CD2AA1CC469C300AB6620 /* ProductInfoHeaderView.xib in Resources */,
@@ -1020,6 +1029,7 @@
 				016C3E261CBF77770007FC8F /* ProductFirstCell.m in Sources */,
 				010CD2AE1CC474BB00AB6620 /* ProductInfoFirstCell.m in Sources */,
 				016C3DEF1CBDF0250007FC8F /* RecruitViewController.m in Sources */,
+				B020DD2B1CC8BC8D00627C74 /* LabDetails.m in Sources */,
 				010CD2CD1CC4D01700AB6620 /* ProductInfoSecondCell.m in Sources */,
 				016C3E4F1CC0AAB30007FC8F /* SelectCollectionViewCell.m in Sources */,
 				016C3E461CC08F9C0007FC8F /* ProductCategoryViewController.m in Sources */,

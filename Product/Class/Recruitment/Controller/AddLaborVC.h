@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LaborCellModel;
 @interface AddLaborVC : UIViewController
-
+@property (nonatomic, copy) void(^submitBlock)(LaborCellModel *mod);
 @end

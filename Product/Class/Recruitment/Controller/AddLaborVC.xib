@@ -82,8 +82,8 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="highlightedColor" red="0.32276668848167545" green="0.32253122845120369" blue="0.30714023350274117" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="下单方式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbU-fd-Q1b">
-                                    <rect key="frame" x="0.0" y="455" width="150" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下单方式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbU-fd-Q1b">
+                                    <rect key="frame" x="0.0" y="455" width="150" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="150" id="CoH-8j-eMb"/>
                                         <constraint firstAttribute="height" constant="20" id="Mxb-Lf-kdx"/>

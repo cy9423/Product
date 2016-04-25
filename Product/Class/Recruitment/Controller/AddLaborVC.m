@@ -7,7 +7,7 @@
 //
 
 #import "AddLaborVC.h"
-
+#import "LaborCellModel.h"
 @interface AddLaborVC ()<UITextViewDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 @property (strong, nonatomic) IBOutlet UIDatePicker *date;
 @property (strong, nonatomic) IBOutlet UITextField *labTitle;
@@ -21,13 +21,14 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *way;
 @property (strong, nonatomic) IBOutlet UIButton *submit;
 @property (strong, nonatomic) NSArray *pickerList;
+@property (nonatomic, retain)LaborCellModel *mod;
 @end
 
 @implementation AddLaborVC
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
+    _mod = [[LaborCellModel alloc]init];
     //时间
     NSLocale *locale = [[NSLocale alloc]initWithLocaleIdentifier:@"zh_CN"];
     NSDate *localDate = [NSDate date];
@@ -84,6 +85,7 @@
     _submit.layer.cornerRadius = 25;
     _submit.layer.borderWidth = 1;
     _submit.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    [_submit addTarget:self action:@selector(submit:) forControlEvents:UIControlEventTouchUpInside];
     
     //注册键盘出现的通知
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -133,6 +135,21 @@
 }
 -(void)keyboardWillBeHidden:(NSNotification*)aNotification {
     _scoll_con.constant = 0;
+}
+
+- (void)submit:(UIButton *)btn {//提交
+    _mod.labTitle = _labTitle.text;
+    _mod.date = @"时间：2016-4-11至2016-4-18";
+    _mod.price = _price.text.floatValue;
+    _mod.addr = _addr.text;
+    _mod.desc = _desc.text;
+#warning //错误
+    _mod.tel = _tel.text.intValue;
+    _mod.way = 0;
+    if (self.submitBlock != nil) {
+        _submitBlock(_mod);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
