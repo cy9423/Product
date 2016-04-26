@@ -32,7 +32,7 @@
     NSArray *picArr = @[@"home",@"discover",@"shop",@"me"];
     NSArray *selectPicArr = @[@"home_select",@"discover_select",@"shop_select",@"me_select"];
     
-    NSArray *titleArr = @[@"商品",@"用工",@"购物车",@"发现"];
+    NSArray *titleArr = @[@"首页",@"用工",@"购物车",@"发现"];
     for (int i = 0; i < 4; i++)
     {
         id class = NSClassFromString(viewControllersArray[i]);
@@ -52,6 +52,7 @@
     self.viewControllers = array;
     
     self.delegate = self;
+    self.title = @"泊头商贸城";
 
 }
 
@@ -60,6 +61,9 @@
     self.title = item.title;
     if ([self.title isEqualToString:@"用工"]) {
         self.title = @"";
+    }
+    if ([self.title isEqualToString:@"首页"]) {
+        self.title = @"泊头商贸城";
     }
 }
 

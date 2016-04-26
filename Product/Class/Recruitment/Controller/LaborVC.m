@@ -112,6 +112,7 @@
         [_table reloadData];
     };
     [self.navigationController pushViewController:add animated:YES];
+    NSLog(@"%@", [NSBundle mainBundle].bundlePath);
 }
 
 - (void)didReceiveMemoryWarning {

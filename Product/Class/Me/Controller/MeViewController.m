@@ -12,6 +12,7 @@
 @property(nonatomic, retain)UITableView *table;
 @property(nonatomic, retain)NSArray *tablist;
 @property(nonatomic, assign)BOOL orderEx;//判断我的订单cell是否展开
+@property(nonatomic, assign)BOOL conEx;//判断联系我们cell是否展开
 @end
 
 @implementation MeViewController
@@ -20,6 +21,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = TabBarBackGroundColor;
     _orderEx = NO;//不展开
+    _conEx = NO;//不展开
     
     //这里是标题view
     _table.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT*0.375)];
@@ -52,7 +54,7 @@
                 @"          我下的订单",
                 @"          我接的订单",
                 @"我的积分",
-                @"我的优惠券", @"",@"",nil];
+                @"我的优惠券", @"联系我们",@"          电话：0411-82400986",nil];
     [self createTableView];
 }
 
@@ -95,6 +97,11 @@
                 cell.textLabel.text = @"";
             }
         }return cell;
+        case 8:{
+            if (!_conEx) {
+                cell.textLabel.text = @"";
+            }
+        }return cell;
         default:
             return cell;
     }
@@ -126,7 +133,12 @@
             return 0;
         }
     }
-    return 60;
+    if (indexPath.row == 8) {
+        if (!_conEx) {
+            return 0;
+        }
+    }
+    return 40;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -168,7 +180,13 @@
             
         case 3:{}
             break;
-        case 4:{}
+        case 7:{
+            _conEx = !_conEx;
+            [_table reloadData];
+        }
+        case 8:{
+
+        }
             break;
         default:
             break;
