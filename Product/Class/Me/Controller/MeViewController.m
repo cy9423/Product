@@ -59,13 +59,13 @@
 }
 
 - (void)createTableView{
-    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
-    _table.bounces = NO;
+    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49) style:UITableViewStylePlain];
+//    _table.bounces = NO;
     _table.tableFooterView = [[UIView alloc]init];
     _table.delegate = self;
     _table.dataSource = self;
     [self.view addSubview:_table];
-    [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+//    [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -141,21 +141,21 @@
     return 40;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    //    if (section == 1) {
-    //        return 20;
-    //    }else{
-    return 0;
-    //    }
-}
-
-//分隔栏的颜色
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *view = [[UIView alloc]init];
-    //    view.backgroundColor = naviColor;
-    //    view.tag = 3003;
-    return view;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    //    if (section == 1) {
+//    //        return 20;
+//    //    }else{
+//    return 0;
+//    //    }
+//}
+//
+////分隔栏的颜色
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    UIView *view = [[UIView alloc]init];
+//    //    view.backgroundColor = naviColor;
+//    //    view.tag = 3003;
+//    return view;
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.view.userInteractionEnabled = NO;
