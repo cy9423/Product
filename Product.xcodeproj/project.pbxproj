@@ -71,6 +71,17 @@
 		B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9A11CC4945C003E2D11 /* ShopCell.m */; };
 		B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD231CC86D6B00627C74 /* sinostar.jpg */; };
 		B020DD261CC86D6B00627C74 /* smith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD241CC86D6B00627C74 /* smith.jpg */; };
+		B02840DC1CFBC6D1002FF4EA /* AddLaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840C71CFBC6D1002FF4EA /* AddLaborVC.m */; };
+		B02840DD1CFBC6D1002FF4EA /* AddLaborVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02840C81CFBC6D1002FF4EA /* AddLaborVC.xib */; };
+		B02840DE1CFBC6D1002FF4EA /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840CA1CFBC6D1002FF4EA /* LaborVC.m */; };
+		B02840DF1CFBC6D1002FF4EA /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840CC1CFBC6D1002FF4EA /* DiscoverController.m */; };
+		B02840E01CFBC6D1002FF4EA /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840CE1CFBC6D1002FF4EA /* WorkerVC.m */; };
+		B02840E11CFBC6D1002FF4EA /* LaborCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D11CFBC6D1002FF4EA /* LaborCellModel.m */; };
+		B02840E21CFBC6D1002FF4EA /* WorkerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D31CFBC6D1002FF4EA /* WorkerCellModel.m */; };
+		B02840E31CFBC6D1002FF4EA /* LabDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D61CFBC6D1002FF4EA /* LabDetails.m */; };
+		B02840E41CFBC6D1002FF4EA /* LabDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02840D71CFBC6D1002FF4EA /* LabDetails.xib */; };
+		B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D91CFBC6D1002FF4EA /* LaborCell.m */; };
+		B02840E61CFBC6D1002FF4EA /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +286,26 @@
 		B004C9A11CC4945C003E2D11 /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
 		B020DD231CC86D6B00627C74 /* sinostar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sinostar.jpg; sourceTree = "<group>"; };
 		B020DD241CC86D6B00627C74 /* smith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smith.jpg; sourceTree = "<group>"; };
+		B02840C61CFBC6D1002FF4EA /* AddLaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLaborVC.h; sourceTree = "<group>"; };
+		B02840C71CFBC6D1002FF4EA /* AddLaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLaborVC.m; sourceTree = "<group>"; };
+		B02840C81CFBC6D1002FF4EA /* AddLaborVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLaborVC.xib; sourceTree = "<group>"; };
+		B02840C91CFBC6D1002FF4EA /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborVC.h; sourceTree = "<group>"; };
+		B02840CA1CFBC6D1002FF4EA /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborVC.m; sourceTree = "<group>"; };
+		B02840CB1CFBC6D1002FF4EA /* DiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverController.h; sourceTree = "<group>"; };
+		B02840CC1CFBC6D1002FF4EA /* DiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverController.m; sourceTree = "<group>"; };
+		B02840CD1CFBC6D1002FF4EA /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
+		B02840CE1CFBC6D1002FF4EA /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
+		B02840D01CFBC6D1002FF4EA /* LaborCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCellModel.h; sourceTree = "<group>"; };
+		B02840D11CFBC6D1002FF4EA /* LaborCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCellModel.m; sourceTree = "<group>"; };
+		B02840D21CFBC6D1002FF4EA /* WorkerCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCellModel.h; sourceTree = "<group>"; };
+		B02840D31CFBC6D1002FF4EA /* WorkerCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCellModel.m; sourceTree = "<group>"; };
+		B02840D51CFBC6D1002FF4EA /* LabDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabDetails.h; sourceTree = "<group>"; };
+		B02840D61CFBC6D1002FF4EA /* LabDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabDetails.m; sourceTree = "<group>"; };
+		B02840D71CFBC6D1002FF4EA /* LabDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabDetails.xib; sourceTree = "<group>"; };
+		B02840D81CFBC6D1002FF4EA /* LaborCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCell.h; sourceTree = "<group>"; };
+		B02840D91CFBC6D1002FF4EA /* LaborCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCell.m; sourceTree = "<group>"; };
+		B02840DA1CFBC6D1002FF4EA /* WorkerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCell.h; sourceTree = "<group>"; };
+		B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +451,7 @@
 		016C3DD51CBDF0250007FC8F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				B02840C41CFBC6D1002FF4EA /* Discover */,
 				016C3DD61CBDF0250007FC8F /* MainController */,
 				016C3DDB1CBDF0250007FC8F /* Me */,
 				016C3DDF1CBDF0250007FC8F /* Product */,
@@ -729,6 +761,57 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		B02840C41CFBC6D1002FF4EA /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				B02840C51CFBC6D1002FF4EA /* Controller */,
+				B02840CF1CFBC6D1002FF4EA /* Model */,
+				B02840D41CFBC6D1002FF4EA /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		B02840C51CFBC6D1002FF4EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B02840C61CFBC6D1002FF4EA /* AddLaborVC.h */,
+				B02840C71CFBC6D1002FF4EA /* AddLaborVC.m */,
+				B02840C81CFBC6D1002FF4EA /* AddLaborVC.xib */,
+				B02840C91CFBC6D1002FF4EA /* LaborVC.h */,
+				B02840CA1CFBC6D1002FF4EA /* LaborVC.m */,
+				B02840CB1CFBC6D1002FF4EA /* DiscoverController.h */,
+				B02840CC1CFBC6D1002FF4EA /* DiscoverController.m */,
+				B02840CD1CFBC6D1002FF4EA /* WorkerVC.h */,
+				B02840CE1CFBC6D1002FF4EA /* WorkerVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B02840CF1CFBC6D1002FF4EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B02840D01CFBC6D1002FF4EA /* LaborCellModel.h */,
+				B02840D11CFBC6D1002FF4EA /* LaborCellModel.m */,
+				B02840D21CFBC6D1002FF4EA /* WorkerCellModel.h */,
+				B02840D31CFBC6D1002FF4EA /* WorkerCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B02840D41CFBC6D1002FF4EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B02840D51CFBC6D1002FF4EA /* LabDetails.h */,
+				B02840D61CFBC6D1002FF4EA /* LabDetails.m */,
+				B02840D71CFBC6D1002FF4EA /* LabDetails.xib */,
+				B02840D81CFBC6D1002FF4EA /* LaborCell.h */,
+				B02840D91CFBC6D1002FF4EA /* LaborCell.m */,
+				B02840DA1CFBC6D1002FF4EA /* WorkerCell.h */,
+				B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -835,6 +918,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02840E41CFBC6D1002FF4EA /* LabDetails.xib in Resources */,
 				B003C3481CC7431200B5C1C8 /* AlipaySDK.bundle in Resources */,
 				016C3DB21CBDF00D0007FC8F /* LaunchScreen.storyboard in Resources */,
 				010CD2AA1CC469C300AB6620 /* ProductInfoHeaderView.xib in Resources */,
@@ -850,6 +934,7 @@
 				016C3E4B1CC095D50007FC8F /* ProductCategoryCell.xib in Resources */,
 				016C3E501CC0AAB30007FC8F /* SelectCollectionViewCell.xib in Resources */,
 				B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */,
+				B02840DD1CFBC6D1002FF4EA /* AddLaborVC.xib in Resources */,
 				016C3E221CBF73EB0007FC8F /* ProductHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,14 +994,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B003C3421CC7431200B5C1C8 /* DataVerifier.m in Sources */,
+				B02840DF1CFBC6D1002FF4EA /* DiscoverController.m in Sources */,
 				016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */,
 				B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
 				B003C2D31CC7331000B5C1C8 /* CYStepper.m in Sources */,
+				B02840E21CFBC6D1002FF4EA /* WorkerCellModel.m in Sources */,
 				B003C33E1CC7431200B5C1C8 /* AlipayRequestConfig.m in Sources */,
 				B003C3471CC7431200B5C1C8 /* RSADataVerifier.m in Sources */,
+				B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
+				B02840E11CFBC6D1002FF4EA /* LaborCellModel.m in Sources */,
+				B02840DE1CFBC6D1002FF4EA /* LaborVC.m in Sources */,
 				B003C3401CC7431200B5C1C8 /* base64.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,
@@ -936,9 +1026,13 @@
 				016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */,
 				016C3E261CBF77770007FC8F /* ProductFirstCell.m in Sources */,
 				010CD2AE1CC474BB00AB6620 /* ProductInfoFirstCell.m in Sources */,
+				B02840E61CFBC6D1002FF4EA /* WorkerCell.m in Sources */,
 				010CD2CD1CC4D01700AB6620 /* ProductInfoSecondCell.m in Sources */,
+				B02840DC1CFBC6D1002FF4EA /* AddLaborVC.m in Sources */,
 				016C3E4F1CC0AAB30007FC8F /* SelectCollectionViewCell.m in Sources */,
 				016C3E461CC08F9C0007FC8F /* ProductCategoryViewController.m in Sources */,
+				B02840E31CFBC6D1002FF4EA /* LabDetails.m in Sources */,
+				B02840E01CFBC6D1002FF4EA /* WorkerVC.m in Sources */,
 				B003C3411CC7431200B5C1C8 /* DataSigner.m in Sources */,
 				016C3E2B1CBF82AD0007FC8F /* ProductSecondCell.m in Sources */,
 				016C3E4A1CC095D50007FC8F /* ProductCategoryCell.m in Sources */,

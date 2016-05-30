@@ -27,12 +27,12 @@
     self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_bg"];
     NSMutableArray *array = [NSMutableArray array];
     
-    NSArray *viewControllersArray = @[@"ProductViewController", @"RecruitViewController", @"ShopViewController", @"MeViewController"];
+    NSArray *viewControllersArray = @[@"ProductViewController", @"DiscoverController", @"ShopViewController", @"MeViewController"];
     
     NSArray *picArr = @[@"home",@"discover",@"shop",@"me"];
     NSArray *selectPicArr = @[@"home_select",@"discover_select",@"shop_select",@"me_select"];
     
-    NSArray *titleArr = @[@"首页",@"用工",@"购物车",@"发现"];
+    NSArray *titleArr = @[@"首页",@"发现",@"购物车",@"我"];//tabbar内容
     for (int i = 0; i < 4; i++)
     {
         id class = NSClassFromString(viewControllersArray[i]);
@@ -53,17 +53,16 @@
     
     self.delegate = self;
     self.title = @"泊头商贸城";
-
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
-    self.title = item.title;
-    if ([self.title isEqualToString:@"用工"]) {
-        self.title = @"";
-    }
-    if ([self.title isEqualToString:@"首页"]) {
+    if ([item.title isEqualToString:@"首页"]) {
         self.title = @"泊头商贸城";
+    }else if ([item.title isEqualToString:@"发现"]) {
+        self.title = @"";
+    }else{
+        self.title = item.title;
     }
 }
 
