@@ -25,7 +25,6 @@
 		016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DDA1CBDF0250007FC8F /* MainTabBarController.m */; };
 		016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DDE1CBDF0250007FC8F /* MeViewController.m */; };
 		016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DE21CBDF0250007FC8F /* ProductViewController.m */; };
-		016C3DEF1CBDF0250007FC8F /* RecruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DE61CBDF0250007FC8F /* RecruitViewController.m */; };
 		016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3DEA1CBDF0250007FC8F /* ShopViewController.m */; };
 		016C3DF41CBDF0840007FC8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016C3DF31CBDF0840007FC8F /* Assets.xcassets */; };
 		016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C3E141CBF69FC0007FC8F /* ProductHeaderView.m */; };
@@ -68,20 +67,10 @@
 		B003C3491CC7431200B5C1C8 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003C33B1CC7431200B5C1C8 /* AlipaySDK.framework */; };
 		B003C34A1CC7431200B5C1C8 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B003C33C1CC7431200B5C1C8 /* libcrypto.a */; };
 		B003C34B1CC7431200B5C1C8 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B003C33D1CC7431200B5C1C8 /* libssl.a */; };
-		B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9631CC45CA2003E2D11 /* LaborCellModel.m */; };
-		B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9651CC45CA2003E2D11 /* WorkerCellModel.m */; };
-		B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9681CC45CA2003E2D11 /* LaborCell.m */; };
-		B004C96E1CC45CA2003E2D11 /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C96A1CC45CA2003E2D11 /* WorkerCell.m */; };
-		B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9701CC45EAD003E2D11 /* LaborVC.m */; };
-		B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9751CC45EC2003E2D11 /* WorkerVC.m */; };
 		B004C99F1CC4942A003E2D11 /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C99E1CC4942A003E2D11 /* ShopModel.m */; };
 		B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9A11CC4945C003E2D11 /* ShopCell.m */; };
-		B00EB1EF1CC62213009F81BF /* AddLaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B00EB1ED1CC62213009F81BF /* AddLaborVC.m */; };
-		B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */; };
 		B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD231CC86D6B00627C74 /* sinostar.jpg */; };
 		B020DD261CC86D6B00627C74 /* smith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD241CC86D6B00627C74 /* smith.jpg */; };
-		B020DD281CC8BC4700627C74 /* LabDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = B020DD271CC8BC4700627C74 /* LabDetails.xib */; };
-		B020DD2B1CC8BC8D00627C74 /* LabDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B020DD2A1CC8BC8D00627C74 /* LabDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,8 +125,6 @@
 		016C3DDE1CBDF0250007FC8F /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		016C3DE11CBDF0250007FC8F /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		016C3DE21CBDF0250007FC8F /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
-		016C3DE51CBDF0250007FC8F /* RecruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitViewController.h; sourceTree = "<group>"; };
-		016C3DE61CBDF0250007FC8F /* RecruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitViewController.m; sourceTree = "<group>"; };
 		016C3DE91CBDF0250007FC8F /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
 		016C3DEA1CBDF0250007FC8F /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
 		016C3DF21CBDF0500007FC8F /* ProduceShop.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProduceShop.pch; sourceTree = "<group>"; };
@@ -282,30 +269,12 @@
 		B003C33B1CC7431200B5C1C8 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		B003C33C1CC7431200B5C1C8 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		B003C33D1CC7431200B5C1C8 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		B004C9621CC45CA2003E2D11 /* LaborCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCellModel.h; sourceTree = "<group>"; };
-		B004C9631CC45CA2003E2D11 /* LaborCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCellModel.m; sourceTree = "<group>"; };
-		B004C9641CC45CA2003E2D11 /* WorkerCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCellModel.h; sourceTree = "<group>"; };
-		B004C9651CC45CA2003E2D11 /* WorkerCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCellModel.m; sourceTree = "<group>"; };
-		B004C9671CC45CA2003E2D11 /* LaborCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCell.h; sourceTree = "<group>"; };
-		B004C9681CC45CA2003E2D11 /* LaborCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCell.m; sourceTree = "<group>"; };
-		B004C9691CC45CA2003E2D11 /* WorkerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCell.h; sourceTree = "<group>"; };
-		B004C96A1CC45CA2003E2D11 /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
-		B004C96F1CC45EAD003E2D11 /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborVC.h; sourceTree = "<group>"; };
-		B004C9701CC45EAD003E2D11 /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborVC.m; sourceTree = "<group>"; };
-		B004C9741CC45EC2003E2D11 /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
-		B004C9751CC45EC2003E2D11 /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
 		B004C99D1CC4942A003E2D11 /* ShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopModel.h; sourceTree = "<group>"; };
 		B004C99E1CC4942A003E2D11 /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
 		B004C9A01CC4945C003E2D11 /* ShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCell.h; sourceTree = "<group>"; };
 		B004C9A11CC4945C003E2D11 /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
-		B00EB1EC1CC62213009F81BF /* AddLaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLaborVC.h; sourceTree = "<group>"; };
-		B00EB1ED1CC62213009F81BF /* AddLaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLaborVC.m; sourceTree = "<group>"; };
-		B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLaborVC.xib; sourceTree = "<group>"; };
 		B020DD231CC86D6B00627C74 /* sinostar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sinostar.jpg; sourceTree = "<group>"; };
 		B020DD241CC86D6B00627C74 /* smith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smith.jpg; sourceTree = "<group>"; };
-		B020DD271CC8BC4700627C74 /* LabDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabDetails.xib; sourceTree = "<group>"; };
-		B020DD291CC8BC8D00627C74 /* LabDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabDetails.h; sourceTree = "<group>"; };
-		B020DD2A1CC8BC8D00627C74 /* LabDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,7 +423,6 @@
 				016C3DD61CBDF0250007FC8F /* MainController */,
 				016C3DDB1CBDF0250007FC8F /* Me */,
 				016C3DDF1CBDF0250007FC8F /* Product */,
-				016C3DE31CBDF0250007FC8F /* Recruitment */,
 				016C3DE71CBDF0250007FC8F /* Shop */,
 			);
 			path = Class;
@@ -509,32 +477,6 @@
 				016C3E521CC0DD100007FC8F /* ProductMenuViewController.m */,
 				010CD2A31CC466C500AB6620 /* ProductInfoViewController.h */,
 				010CD2A41CC466C500AB6620 /* ProductInfoViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		016C3DE31CBDF0250007FC8F /* Recruitment */ = {
-			isa = PBXGroup;
-			children = (
-				B004C9611CC45CA2003E2D11 /* Model */,
-				B004C9661CC45CA2003E2D11 /* View */,
-				016C3DE41CBDF0250007FC8F /* Controller */,
-			);
-			path = Recruitment;
-			sourceTree = "<group>";
-		};
-		016C3DE41CBDF0250007FC8F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				016C3DE51CBDF0250007FC8F /* RecruitViewController.h */,
-				016C3DE61CBDF0250007FC8F /* RecruitViewController.m */,
-				B004C96F1CC45EAD003E2D11 /* LaborVC.h */,
-				B004C9701CC45EAD003E2D11 /* LaborVC.m */,
-				B004C9741CC45EC2003E2D11 /* WorkerVC.h */,
-				B004C9751CC45EC2003E2D11 /* WorkerVC.m */,
-				B00EB1EC1CC62213009F81BF /* AddLaborVC.h */,
-				B00EB1ED1CC62213009F81BF /* AddLaborVC.m */,
-				B00EB1EE1CC62213009F81BF /* AddLaborVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -778,31 +720,6 @@
 			path = AlipaySDK;
 			sourceTree = "<group>";
 		};
-		B004C9611CC45CA2003E2D11 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B004C9621CC45CA2003E2D11 /* LaborCellModel.h */,
-				B004C9631CC45CA2003E2D11 /* LaborCellModel.m */,
-				B004C9641CC45CA2003E2D11 /* WorkerCellModel.h */,
-				B004C9651CC45CA2003E2D11 /* WorkerCellModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B004C9661CC45CA2003E2D11 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B004C9671CC45CA2003E2D11 /* LaborCell.h */,
-				B004C9681CC45CA2003E2D11 /* LaborCell.m */,
-				B004C9691CC45CA2003E2D11 /* WorkerCell.h */,
-				B004C96A1CC45CA2003E2D11 /* WorkerCell.m */,
-				B020DD271CC8BC4700627C74 /* LabDetails.xib */,
-				B020DD291CC8BC8D00627C74 /* LabDetails.h */,
-				B020DD2A1CC8BC8D00627C74 /* LabDetails.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		B020DD221CC86D6B00627C74 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -918,7 +835,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B020DD281CC8BC4700627C74 /* LabDetails.xib in Resources */,
 				B003C3481CC7431200B5C1C8 /* AlipaySDK.bundle in Resources */,
 				016C3DB21CBDF00D0007FC8F /* LaunchScreen.storyboard in Resources */,
 				010CD2AA1CC469C300AB6620 /* ProductInfoHeaderView.xib in Resources */,
@@ -929,7 +845,6 @@
 				016C3E2C1CBF82AD0007FC8F /* ProductSecondCell.xib in Resources */,
 				016C3E271CBF77770007FC8F /* ProductFirstCell.xib in Resources */,
 				016C3E311CBF82BF0007FC8F /* ProductDoubleCell.xib in Resources */,
-				B00EB1F01CC62213009F81BF /* AddLaborVC.xib in Resources */,
 				016C3E361CBF82FF0007FC8F /* ProductSingularCell.xib in Resources */,
 				B020DD261CC86D6B00627C74 /* smith.jpg in Resources */,
 				016C3E4B1CC095D50007FC8F /* ProductCategoryCell.xib in Resources */,
@@ -995,31 +910,24 @@
 			files = (
 				B003C3421CC7431200B5C1C8 /* DataVerifier.m in Sources */,
 				016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */,
-				B004C96C1CC45CA2003E2D11 /* WorkerCellModel.m in Sources */,
 				B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */,
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
 				B003C2D31CC7331000B5C1C8 /* CYStepper.m in Sources */,
 				B003C33E1CC7431200B5C1C8 /* AlipayRequestConfig.m in Sources */,
-				B004C96B1CC45CA2003E2D11 /* LaborCellModel.m in Sources */,
-				B00EB1EF1CC62213009F81BF /* AddLaborVC.m in Sources */,
 				B003C3471CC7431200B5C1C8 /* RSADataVerifier.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
 				B003C3401CC7431200B5C1C8 /* base64.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,
-				B004C96E1CC45CA2003E2D11 /* WorkerCell.m in Sources */,
-				B004C96D1CC45CA2003E2D11 /* LaborCell.m in Sources */,
 				B003C3451CC7431200B5C1C8 /* openssl_wrapper.m in Sources */,
 				016C3DA41CBDF00D0007FC8F /* main.m in Sources */,
 				B003C3441CC7431200B5C1C8 /* NSDataEx.m in Sources */,
 				016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */,
 				B003C3461CC7431200B5C1C8 /* RSADataSigner.m in Sources */,
-				B004C9711CC45EAD003E2D11 /* LaborVC.m in Sources */,
 				B004C99F1CC4942A003E2D11 /* ShopModel.m in Sources */,
 				B003C3431CC7431200B5C1C8 /* MD5DataSigner.m in Sources */,
 				B003C33F1CC7431200B5C1C8 /* Order.m in Sources */,
-				B004C9771CC45EC2003E2D11 /* WorkerVC.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
 				016C3E531CC0DD100007FC8F /* ProductMenuViewController.m in Sources */,
 				016C3E301CBF82BF0007FC8F /* ProductDoubleCell.m in Sources */,
@@ -1028,8 +936,6 @@
 				016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */,
 				016C3E261CBF77770007FC8F /* ProductFirstCell.m in Sources */,
 				010CD2AE1CC474BB00AB6620 /* ProductInfoFirstCell.m in Sources */,
-				016C3DEF1CBDF0250007FC8F /* RecruitViewController.m in Sources */,
-				B020DD2B1CC8BC8D00627C74 /* LabDetails.m in Sources */,
 				010CD2CD1CC4D01700AB6620 /* ProductInfoSecondCell.m in Sources */,
 				016C3E4F1CC0AAB30007FC8F /* SelectCollectionViewCell.m in Sources */,
 				016C3E461CC08F9C0007FC8F /* ProductCategoryViewController.m in Sources */,
