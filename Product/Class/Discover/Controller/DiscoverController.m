@@ -8,21 +8,20 @@
 
 #import "DiscoverController.h"
 #import "LaborVC.h"
-#import "WorkerVC.h"
 @interface DiscoverController ()
-@property(nonatomic, strong)LaborVC *labor;//用工
-@property(nonatomic, strong)WorkerVC *worker;//散工
+@property(nonatomic, strong)LaborVC *labor1;//上新
+@property(nonatomic, strong)LaborVC *labor2;//关注
+@property(nonatomic, strong)LaborVC *labor3;//良品
+@property(nonatomic, strong)UIView *temp;
 @property(nonatomic, retain)UISegmentedControl *discover;
 @end
 
 @implementation DiscoverController
-static int i = 64;
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navigationController.tabBarItem.title = @"发现";
-        
-        _discover = [[UISegmentedControl alloc]initWithItems:@[@"用工订单", @"散工接单"]];
+        _discover = [[UISegmentedControl alloc]initWithItems:@[@"上新", @"关注", @"良品"]];
         _discover.frame = CGRectMake(SCREEN_WIDTH/2-100, 0, 200, 40);
         _discover.selectedSegmentIndex = 0;
         [_discover addTarget:self action:@selector(choose:) forControlEvents:UIControlEventValueChanged];
@@ -37,19 +36,13 @@ static int i = 64;
         NSDictionary* unselectedTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
                                                    NSForegroundColorAttributeName: [UIColor lightTextColor]};
         [_discover setTitleTextAttributes:unselectedTextAttributes forState:UIControlStateNormal];
-        
-        _labor = [[LaborVC alloc]init];
-        _worker = [[WorkerVC alloc]init];
     }
     return self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.navigationController.navigationBar addSubview:_discover];
-    [_labor.view setFrame:CGRectMake(0, i, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    [_worker.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -60,26 +53,38 @@ static int i = 64;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:_worker.view];
-    [self addChildViewController:_worker];
-    [self.view addSubview:_labor.view];
-    [self addChildViewController:_labor];
+    
+    _labor1 = [[LaborVC alloc]init];
+    _labor2 = [[LaborVC alloc]init];
+    _labor3 = [[LaborVC alloc]init];
+    
+    [self.view addSubview:_labor1.view];
+    _temp = _labor1.view;
 }
 
 - (void)choose:(UISegmentedControl *)segment{
     switch (segment.selectedSegmentIndex) {
         case 0:
         {
-            [self transitionFromViewController:_worker toViewController:_labor duration:0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finish){
-            }];
+            [_temp removeFromSuperview];
+            _temp = _labor1.view;
+            [self.view addSubview: _temp];
             break;
         }
             
         case 1:
         {
-            [self transitionFromViewController:_labor toViewController:_worker duration:0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finish){
-            }];
-            i = 0;
+            [_temp removeFromSuperview];
+            _temp = _labor2.view;
+            [self.view addSubview: _temp];
+            break;
+        }
+            
+        case 2:
+        {
+            [_temp removeFromSuperview];
+            _temp = _labor3.view;
+            [self.view addSubview: _temp];
             break;
         }
     }

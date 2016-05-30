@@ -10,9 +10,7 @@
 #import "LaborCell.h"
 #import "LaborCellModel.h"
 #import "LabDetails.h"
-#import "AddLaborVC.h"
 @interface LaborVC()<UITableViewDelegate, UITableViewDataSource>
-@property(nonatomic, retain)UIButton *addlab;//下单按钮
 @property(nonatomic, retain)UITableView *table;//列表
 @property(nonatomic, assign)NSInteger cellheight;//cell高度
 @property(nonatomic, retain)LabDetails *labDetails;//cell点击的详情页面
@@ -23,12 +21,6 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _addlab = [UIButton buttonWithType:UIButtonTypeSystem];
-        _addlab.frame =CGRectMake(SCREEN_WIDTH-50, 10, 50, 25);
-        [_addlab setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_addlab setTitle:@"下单" forState:UIControlStateNormal];
-        [_addlab addTarget:self action:@selector(pushAdd:) forControlEvents:UIControlEventTouchUpInside];
-        
         _cellheight = 40;
         _tempArr = [[NSMutableArray alloc]init];
     }
@@ -37,21 +29,19 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.navigationController.navigationBar addSubview:_addlab];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [_addlab removeFromSuperview];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     //创建tableview
-    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49) style:UITableViewStylePlain];
+    _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-113) style:UITableViewStylePlain];
     _table.backgroundColor = [UIColor groupTableViewBackgroundColor];
     _table.delegate = self;
     _table.dataSource = self;
@@ -101,15 +91,6 @@
     _labDetails.mod = _tempArr[indexPath.row];
     [self.view addSubview:_labDetails];
     self.view.userInteractionEnabled = YES;
-}
-
-- (void)pushAdd:(UIBarButtonItem *)button {
-    AddLaborVC *add = [[AddLaborVC alloc]init];
-    add.submitBlock = ^(LaborCellModel *mod){
-        [_tempArr insertObject:mod atIndex:0];
-        [_table reloadData];
-    };
-    [self.navigationController pushViewController:add animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
