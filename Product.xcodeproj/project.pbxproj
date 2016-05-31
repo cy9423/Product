@@ -83,6 +83,8 @@
 		B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D91CFBC6D1002FF4EA /* LaborCell.m */; };
 		B02840E61CFBC6D1002FF4EA /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */; };
 		B06922F71CFD36AE00B2652D /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B06922F61CFD36AE00B2652D /* user.jpg */; };
+		B06923001CFD75E900B2652D /* settingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06922FE1CFD75E900B2652D /* settingsController.m */; };
+		B06923011CFD75E900B2652D /* settingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06922FF1CFD75E900B2652D /* settingsController.xib */; };
 		B0FB01131CFC176900C2C957 /* MeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB01121CFC176900C2C957 /* MeModel.m */; };
 /* End PBXBuildFile section */
 
@@ -309,6 +311,9 @@
 		B02840DA1CFBC6D1002FF4EA /* WorkerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCell.h; sourceTree = "<group>"; };
 		B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
 		B06922F61CFD36AE00B2652D /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
+		B06922FD1CFD75E900B2652D /* settingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsController.h; sourceTree = "<group>"; };
+		B06922FE1CFD75E900B2652D /* settingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsController.m; sourceTree = "<group>"; };
+		B06922FF1CFD75E900B2652D /* settingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsController.xib; sourceTree = "<group>"; };
 		B0FB01111CFC176900C2C957 /* MeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeModel.h; sourceTree = "<group>"; };
 		B0FB01121CFC176900C2C957 /* MeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -488,8 +493,11 @@
 		016C3DDC1CBDF0250007FC8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				016C3DDE1CBDF0250007FC8F /* MeViewController.m */,
 				016C3DDD1CBDF0250007FC8F /* MeViewController.h */,
+				016C3DDE1CBDF0250007FC8F /* MeViewController.m */,
+				B06922FD1CFD75E900B2652D /* settingsController.h */,
+				B06922FE1CFD75E900B2652D /* settingsController.m */,
+				B06922FF1CFD75E900B2652D /* settingsController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -946,6 +954,7 @@
 				016C3E2C1CBF82AD0007FC8F /* ProductSecondCell.xib in Resources */,
 				016C3E271CBF77770007FC8F /* ProductFirstCell.xib in Resources */,
 				016C3E311CBF82BF0007FC8F /* ProductDoubleCell.xib in Resources */,
+				B06923011CFD75E900B2652D /* settingsController.xib in Resources */,
 				016C3E361CBF82FF0007FC8F /* ProductSingularCell.xib in Resources */,
 				B020DD261CC86D6B00627C74 /* smith.jpg in Resources */,
 				016C3E4B1CC095D50007FC8F /* ProductCategoryCell.xib in Resources */,
@@ -1022,6 +1031,7 @@
 				B003C3471CC7431200B5C1C8 /* RSADataVerifier.m in Sources */,
 				B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
+				B06923001CFD75E900B2652D /* settingsController.m in Sources */,
 				B02840E11CFBC6D1002FF4EA /* LaborCellModel.m in Sources */,
 				B02840DE1CFBC6D1002FF4EA /* LaborVC.m in Sources */,
 				B003C3401CC7431200B5C1C8 /* base64.m in Sources */,

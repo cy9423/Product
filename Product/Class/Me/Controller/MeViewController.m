@@ -8,6 +8,7 @@
 
 #import "MeViewController.h"
 #import "MeModel.h"
+#import "settingsController.h"
 @interface MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, retain)UITableView *table;
 @property(nonatomic, retain)NSMutableArray *tablist;
@@ -219,10 +220,10 @@ static BOOL isLogin;
 #pragma mark - 登录
 
 - (void)login:(UIButton *)button{//点击用户头像
-    if (isLogin) {
-        NSLog(@"666");//如果已登录则弹出详细信息
-    } else {
-        //如果未登录则弹出登录对话框
+    if (isLogin) {//如果已登录则弹出详细信息
+        settingsController *set = [[settingsController alloc]init];
+        [self.navigationController pushViewController:set animated:YES];
+    } else {//如果未登录则弹出登录对话框
         [self alertWithTitle:@"请登录" andMsg:nil andLoginText:nil andPwdText:nil];
     }
 }
@@ -236,7 +237,7 @@ static BOOL isLogin;
 - (void)setLoginImg{//头像
     if (!isLogin) {
         [_login setImage:[UIImage imageNamed:@"NoUser"] forState:UIControlStateNormal];
-    }else if ([MeModel userInfo].login == nil) {//判断条件看后台,以后优化
+    }else if ([[MeModel userInfo].login isEqualToString:@""]) {//判断条件看后台,以后优化
         [_login setImage:[UIImage imageNamed:@"NoPic"] forState:UIControlStateNormal];//登陆后无头像
     }else {
         [_login setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[MeModel userInfo].login]]] forState:UIControlStateNormal];
@@ -269,7 +270,7 @@ static BOOL isLogin;
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"密码";
         textField.secureTextEntry = YES;
-        textField.text = msg;
+        textField.text = pwd;
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction *okAction){

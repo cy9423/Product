@@ -175,7 +175,7 @@
                                     </state>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="jpo-MP-MJ7" firstAttribute="width" secondItem="Fj3-Yh-J4Z" secondAttribute="width" id="1lm-xF-VwU"/>
                                 <constraint firstItem="zQj-2n-iJc" firstAttribute="top" secondItem="jpo-MP-MJ7" secondAttribute="bottom" constant="30" id="2tN-wt-MRZ"/>
