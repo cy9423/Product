@@ -82,6 +82,8 @@
 		B02840E41CFBC6D1002FF4EA /* LabDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02840D71CFBC6D1002FF4EA /* LabDetails.xib */; };
 		B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D91CFBC6D1002FF4EA /* LaborCell.m */; };
 		B02840E61CFBC6D1002FF4EA /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */; };
+		B06922F71CFD36AE00B2652D /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B06922F61CFD36AE00B2652D /* user.jpg */; };
+		B0FB01131CFC176900C2C957 /* MeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB01121CFC176900C2C957 /* MeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,6 +308,9 @@
 		B02840D91CFBC6D1002FF4EA /* LaborCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCell.m; sourceTree = "<group>"; };
 		B02840DA1CFBC6D1002FF4EA /* WorkerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCell.h; sourceTree = "<group>"; };
 		B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
+		B06922F61CFD36AE00B2652D /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
+		B0FB01111CFC176900C2C957 /* MeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeModel.h; sourceTree = "<group>"; };
+		B0FB01121CFC176900C2C957 /* MeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +479,7 @@
 		016C3DDB1CBDF0250007FC8F /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				B0FB01101CFC174D00C2C957 /* Model */,
 				016C3DDC1CBDF0250007FC8F /* Controller */,
 			);
 			path = Me;
@@ -757,6 +763,7 @@
 			children = (
 				B020DD231CC86D6B00627C74 /* sinostar.jpg */,
 				B020DD241CC86D6B00627C74 /* smith.jpg */,
+				B06922F61CFD36AE00B2652D /* user.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -810,6 +817,15 @@
 				B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B0FB01101CFC174D00C2C957 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB01111CFC176900C2C957 /* MeModel.h */,
+				B0FB01121CFC176900C2C957 /* MeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -925,6 +941,7 @@
 				010CD2AF1CC474BB00AB6620 /* ProductInfoFirstCell.xib in Resources */,
 				010CD2CE1CC4D01700AB6620 /* ProductInfoSecondCell.xib in Resources */,
 				016C3DF41CBDF0840007FC8F /* Assets.xcassets in Resources */,
+				B06922F71CFD36AE00B2652D /* user.jpg in Resources */,
 				016C3DAD1CBDF00D0007FC8F /* Main.storyboard in Resources */,
 				016C3E2C1CBF82AD0007FC8F /* ProductSecondCell.xib in Resources */,
 				016C3E271CBF77770007FC8F /* ProductFirstCell.xib in Resources */,
@@ -1020,6 +1037,7 @@
 				B003C33F1CC7431200B5C1C8 /* Order.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
 				016C3E531CC0DD100007FC8F /* ProductMenuViewController.m in Sources */,
+				B0FB01131CFC176900C2C957 /* MeModel.m in Sources */,
 				016C3E301CBF82BF0007FC8F /* ProductDoubleCell.m in Sources */,
 				010CD2A81CC469A500AB6620 /* ProductInfoHeaderView.m in Sources */,
 				010CD2A51CC466C500AB6620 /* ProductInfoViewController.m in Sources */,
