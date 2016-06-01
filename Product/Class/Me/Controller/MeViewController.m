@@ -237,8 +237,9 @@ static BOOL isLogin;
 - (void)setLoginImg{//头像
     if (!isLogin) {
         [_login setImage:[UIImage imageNamed:@"NoUser"] forState:UIControlStateNormal];
-    }else if ([[MeModel userInfo].login isEqualToString:@""]) {//判断条件看后台,以后优化
-        [_login setImage:[UIImage imageNamed:@"NoPic"] forState:UIControlStateNormal];//登陆后无头像
+    }else if ([[MeModel userInfo].login isEqualToString:@""]) {
+#warning 判断条件看后台,以后优化
+        [_login setImage:[UIImage imageNamed:@"NoPic"] forState:UIControlStateNormal];//登陆后无头像 
     }else {
         [_login setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[MeModel userInfo].login]]] forState:UIControlStateNormal];
     }
