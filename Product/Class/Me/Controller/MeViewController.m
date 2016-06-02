@@ -259,11 +259,29 @@ static BOOL isLogin = NO;
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
         textField.placeholder = @"账号";
         textField.text = name;
+        
+        textField.rightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+        textField.rightViewMode = UITextFieldViewModeAlways;
+        UIButton *regi = [UIButton buttonWithType:UIButtonTypeCustom];
+        [regi setTitle:@"注册" forState:UIControlStateNormal];
+        regi.titleLabel.font =[UIFont systemFontOfSize:11];
+        [regi setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [regi setFrame:textField.rightView.frame];
+        [textField.rightView addSubview:regi];
     }];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"密码";
         textField.secureTextEntry = YES;
         textField.text = pwd;
+        
+        textField.rightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+        textField.rightViewMode = UITextFieldViewModeAlways;
+        UIButton *forget = [UIButton buttonWithType:UIButtonTypeCustom];
+        [forget setTitle:@"忘记密码" forState:UIControlStateNormal];
+        forget.titleLabel.font =[UIFont systemFontOfSize:11];
+        [forget setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [forget setFrame:textField.rightView.frame];
+        [textField.rightView addSubview:forget];
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction *okAction){
