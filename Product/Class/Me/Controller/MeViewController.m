@@ -17,23 +17,12 @@
 
 @implementation MeViewController
 
-static BOOL isLogin;
-
--(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        //初始化用户信息
-        isLogin = NO;//默认为未登录
-    }
-    return self;
-}
+static BOOL isLogin = NO;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (isLogin) {
         [self reloadData];//已登录则刷新数据
-    }else{
-        [self checkName:[MeModel userInfo].name andPassWord:[MeModel userInfo].password withAlert:NO];//尝试自动登录
     }
 }
 
@@ -74,6 +63,7 @@ static BOOL isLogin;
                                                                   @"退出登录"]
                                                         }]];
     [self createTableView];
+    [self checkName:[MeModel userInfo].name andPassWord:[MeModel userInfo].password withAlert:NO];//尝试自动登录
 }
 
 #pragma mark - table
@@ -81,7 +71,7 @@ static BOOL isLogin;
 - (void)createTableView{
     _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49) style:UITableViewStyleGrouped];
     _table.backgroundColor = TabBarBackGroundColor;
-    //    _table.bounces = NO;//弹性关闭
+    _table.bounces = NO;//弹性关闭
     [_table setSeparatorStyle:UITableViewCellSeparatorStyleNone];//分割线
     _table.delegate = self;
     _table.dataSource = self;
@@ -97,7 +87,6 @@ static BOOL isLogin;
     _login.layer.cornerRadius = 70;
     _login.layer.masksToBounds = YES;
     [_login addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
-    [self setLoginImg];//设置头像
     [_table.tableHeaderView addSubview:_login];
 }
 
@@ -203,10 +192,11 @@ static BOOL isLogin;
                 case 6:{
                     [MeModel userInfo].name = @"";
                     [MeModel userInfo].password = @"";
+                    [MeModel userInfo].login = @"";
                     [MeModel synchro];
                     isLogin = NO;
-                    [self setLoginImg];
-                    [self sectionClick:[self.view viewWithTag:300+indexPath.section]];
+                    [self sectionClick:[self.view viewWithTag:300+indexPath.section]];//折叠
+                    [self reloadData];
                 }break;
                 default:
                     break;
@@ -229,36 +219,38 @@ static BOOL isLogin;
 }
 
 - (void)reloadData{//刷新数据
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"file://%@", [[NSBundle mainBundle]pathForResource:@"user" ofType:@"jpg"]],@"login", nil];
-    [[MeModel userInfo] setValuesForKeysWithDictionary:dic];
-    [self setLoginImg];//修改头像
-}
-
-- (void)setLoginImg{//头像
-    if (!isLogin) {
+    if (isLogin) {//已登录
+#warning 判断条件@"login"看后台,以后优化
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"file://%@", [[NSBundle mainBundle]pathForResource:@"user" ofType:@"jpg"]],@"login", nil];
+        if ([[dic valueForKey:@"login"]isEqual:@""]) {
+#warning 判断条件@""看后台,以后优化
+            [_login setImage:[UIImage imageNamed:@"NoPic"] forState:UIControlStateNormal];//登陆后无头像
+        }else if (![[dic valueForKey:@"login"]isEqual:[MeModel userInfo].login]) {
+            [_login setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[dic valueForKey:@"login"]]]] forState:UIControlStateNormal];
+        }
+        [[MeModel userInfo] setValuesForKeysWithDictionary:dic];
+    } else {//未登录 或 登录失败 或 正在退出
         [_login setImage:[UIImage imageNamed:@"NoUser"] forState:UIControlStateNormal];
-    }else if ([[MeModel userInfo].login isEqualToString:@""]) {
-#warning 判断条件看后台,以后优化
-        [_login setImage:[UIImage imageNamed:@"NoPic"] forState:UIControlStateNormal];//登陆后无头像 
-    }else {
-        [_login setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[MeModel userInfo].login]]] forState:UIControlStateNormal];
     }
+    [_table reloadData];
 }
 
 - (void)checkName:(NSString *)name andPassWord:(NSString *)password withAlert:(BOOL)isAlert {//登录
     _login.userInteractionEnabled = NO;
-    if (!([name isEqualToString:@""]||[password isEqualToString:@""])) {//不为空
-        if ([name isEqualToString:@"abc"]&&[password isEqualToString:@"123"]) {
-            //保存用户名密码到userdefault
-            [MeModel userInfo].name = name;
-            [MeModel userInfo].password = password;
-            [MeModel synchro];
-            isLogin = YES;
-            [self reloadData];
-        }else if(isAlert) {//报错
+    if ([name isEqualToString:@"abc"]&&[password isEqualToString:@"123"]) {
+        //保存用户名密码到userdefault
+        [MeModel userInfo].name = name;
+        [MeModel userInfo].password = password;
+        [MeModel synchro];
+        isLogin = YES;
+    } else {
+        if (isAlert) {
             [self alertWithTitle:@"请重新登录" andMsg:@"用户名或密码错误" andLoginText:name andPwdText:password];
+        } else {//只有初始化尝试自动登录失败才会到这里
+           
         }
     }
+    [self reloadData];
     _login.userInteractionEnabled = YES;
 }
 
