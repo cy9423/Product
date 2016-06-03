@@ -44,8 +44,18 @@
 - (void)handelData{
     //    //开始请求数据
     //    [_table.header beginRefreshing];
-    for (int i=0; i<20; i++) {
-        FocusModel *mod = [FocusModel modWithDic:@{}];
+    NSDictionary *tempDic = @{@"allFocus":@[@{@"pic":@"https://img.alicdn.com/bao/uploaded/i4/TB1EpvhIVXXXXaWXpXXXXXXXXXX_!!0-item_pic.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/imgextra/i1/2231456847/TB2g1ReiXXXXXbPXXXXXXXXXXXX_!!2231456847.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i2/TB1URkDKVXXXXcfXFXXXXXXXXXX_!!0-item_pic.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i1/TB1SUIZJFXXXXXwXpXXXXXXXXXX_!!2-item_pic.png"},
+                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i1/TB1Lt6.KXXXXXX1XFXXXXXXXXXX_!!0-item_pic.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/imgextra/i4/803415982/TB27x9cXFXXXXb7XpXXXXXXXXXX_!!803415982.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i3/T1zQ5.FA4cXXXXXXXX_!!0-item_pic.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i1/TB1LHmTGFXXXXaOXpXXXXXXXXXX_!!0-item_pic.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i3/TB1KX9gHXXXXXbEXVXXXXXXXXXX_!!0-item_pic.jpg"},
+                                            @{@"pic":@"https://img.alicdn.com/imgextra/i3/2294044846/TB2mjYspXXXXXbaXpXXXXXXXXXX_!!2294044846.jpg"}]};
+    for (NSDictionary *dic in [tempDic objectForKey:@"allFocus"]) {
+        FocusModel *mod = [FocusModel modWithDic:dic];
         [_tablist addObject:mod];
     }
 }

@@ -17,19 +17,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
-        _height = 150;
+        _height = 300;
         
         _background = [[UIView alloc]init];
         _background.layer.shadowColor = [UIColor blackColor].CGColor;
         _background.layer.shadowOffset = CGSizeMake(2,2);
         _background.layer.shadowOpacity = 0.8;
         _background.layer.shadowRadius = 4;
-        _background.layer.cornerRadius = 10;
         [self.contentView addSubview:_background];
         
         _img = [[UIImageView alloc]init];
-        _img.layer.masksToBounds = YES;
-        _img.layer.cornerRadius = 10;
         [_background addSubview:_img];
     }
     return self;
@@ -40,13 +37,18 @@
     _background.backgroundColor = [UIColor whiteColor];
     _img.backgroundColor = [UIColor lightGrayColor];
     
-    _background.frame = CGRectMake(12, 10, SCREEN_WIDTH-25, 130);
-    _img.frame = CGRectMake(12, 12, 85, 105);
+    _background.frame = CGRectMake(12, 10, SCREEN_WIDTH-25, 280);
+    _img.frame = _background.bounds;
 }
 
 - (void)setMod:(NewsModel *)mod{
     _mod = mod;
-    [_img setImage:[UIImage imageNamed:@"sinostar.jpg"]];
+#warning 判断条件@""看后台
+    if ([_mod.pic isEqualToString:@""]) {
+        [_img setImage:[UIImage imageNamed:@"sinostar.jpg"]];
+    }else{
+        [_img setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_mod.pic]]]];
+    }
 }
 
 @end

@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface GoodModel : NSObject
+@property (nonatomic, strong)NSString *pic;//商品图片
 + (id)modWithDic:(NSDictionary *)dic;
 @end
