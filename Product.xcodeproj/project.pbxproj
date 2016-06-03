@@ -71,20 +71,19 @@
 		B004C9A21CC4945C003E2D11 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B004C9A11CC4945C003E2D11 /* ShopCell.m */; };
 		B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD231CC86D6B00627C74 /* sinostar.jpg */; };
 		B020DD261CC86D6B00627C74 /* smith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B020DD241CC86D6B00627C74 /* smith.jpg */; };
-		B02840DC1CFBC6D1002FF4EA /* AddLaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840C71CFBC6D1002FF4EA /* AddLaborVC.m */; };
-		B02840DD1CFBC6D1002FF4EA /* AddLaborVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02840C81CFBC6D1002FF4EA /* AddLaborVC.xib */; };
-		B02840DE1CFBC6D1002FF4EA /* LaborVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840CA1CFBC6D1002FF4EA /* LaborVC.m */; };
 		B02840DF1CFBC6D1002FF4EA /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840CC1CFBC6D1002FF4EA /* DiscoverController.m */; };
-		B02840E01CFBC6D1002FF4EA /* WorkerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840CE1CFBC6D1002FF4EA /* WorkerVC.m */; };
-		B02840E11CFBC6D1002FF4EA /* LaborCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D11CFBC6D1002FF4EA /* LaborCellModel.m */; };
-		B02840E21CFBC6D1002FF4EA /* WorkerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D31CFBC6D1002FF4EA /* WorkerCellModel.m */; };
-		B02840E31CFBC6D1002FF4EA /* LabDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D61CFBC6D1002FF4EA /* LabDetails.m */; };
-		B02840E41CFBC6D1002FF4EA /* LabDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02840D71CFBC6D1002FF4EA /* LabDetails.xib */; };
-		B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840D91CFBC6D1002FF4EA /* LaborCell.m */; };
-		B02840E61CFBC6D1002FF4EA /* WorkerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */; };
 		B06922F71CFD36AE00B2652D /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B06922F61CFD36AE00B2652D /* user.jpg */; };
 		B06923001CFD75E900B2652D /* settingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06922FE1CFD75E900B2652D /* settingsController.m */; };
 		B06923011CFD75E900B2652D /* settingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06922FF1CFD75E900B2652D /* settingsController.xib */; };
+		B078ADEC1D00073000E36066 /* FocusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADEB1D00073000E36066 /* FocusVC.m */; };
+		B078ADEF1D00074300E36066 /* GoodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADEE1D00074300E36066 /* GoodVC.m */; };
+		B078ADF21D00076000E36066 /* NewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADF11D00076000E36066 /* NewsVC.m */; };
+		B078ADF51D00088600E36066 /* FocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADF41D00088600E36066 /* FocusCell.m */; };
+		B078ADF81D00089800E36066 /* GoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADF71D00089800E36066 /* GoodCell.m */; };
+		B078ADFB1D0008AB00E36066 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADFA1D0008AB00E36066 /* NewsCell.m */; };
+		B078ADFE1D0009DF00E36066 /* FocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B078ADFD1D0009DF00E36066 /* FocusModel.m */; };
+		B078AE011D0009F400E36066 /* GoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B078AE001D0009F400E36066 /* GoodModel.m */; };
+		B078AE041D000A0400E36066 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B078AE031D000A0400E36066 /* NewsModel.m */; };
 		B0FB01131CFC176900C2C957 /* MeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FB01121CFC176900C2C957 /* MeModel.m */; };
 /* End PBXBuildFile section */
 
@@ -290,30 +289,30 @@
 		B004C9A11CC4945C003E2D11 /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
 		B020DD231CC86D6B00627C74 /* sinostar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sinostar.jpg; sourceTree = "<group>"; };
 		B020DD241CC86D6B00627C74 /* smith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smith.jpg; sourceTree = "<group>"; };
-		B02840C61CFBC6D1002FF4EA /* AddLaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLaborVC.h; sourceTree = "<group>"; };
-		B02840C71CFBC6D1002FF4EA /* AddLaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLaborVC.m; sourceTree = "<group>"; };
-		B02840C81CFBC6D1002FF4EA /* AddLaborVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLaborVC.xib; sourceTree = "<group>"; };
-		B02840C91CFBC6D1002FF4EA /* LaborVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborVC.h; sourceTree = "<group>"; };
-		B02840CA1CFBC6D1002FF4EA /* LaborVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborVC.m; sourceTree = "<group>"; };
 		B02840CB1CFBC6D1002FF4EA /* DiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverController.h; sourceTree = "<group>"; };
 		B02840CC1CFBC6D1002FF4EA /* DiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverController.m; sourceTree = "<group>"; };
-		B02840CD1CFBC6D1002FF4EA /* WorkerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerVC.h; sourceTree = "<group>"; };
-		B02840CE1CFBC6D1002FF4EA /* WorkerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerVC.m; sourceTree = "<group>"; };
-		B02840D01CFBC6D1002FF4EA /* LaborCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCellModel.h; sourceTree = "<group>"; };
-		B02840D11CFBC6D1002FF4EA /* LaborCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCellModel.m; sourceTree = "<group>"; };
-		B02840D21CFBC6D1002FF4EA /* WorkerCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCellModel.h; sourceTree = "<group>"; };
-		B02840D31CFBC6D1002FF4EA /* WorkerCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCellModel.m; sourceTree = "<group>"; };
-		B02840D51CFBC6D1002FF4EA /* LabDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabDetails.h; sourceTree = "<group>"; };
-		B02840D61CFBC6D1002FF4EA /* LabDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabDetails.m; sourceTree = "<group>"; };
-		B02840D71CFBC6D1002FF4EA /* LabDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabDetails.xib; sourceTree = "<group>"; };
-		B02840D81CFBC6D1002FF4EA /* LaborCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaborCell.h; sourceTree = "<group>"; };
-		B02840D91CFBC6D1002FF4EA /* LaborCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaborCell.m; sourceTree = "<group>"; };
-		B02840DA1CFBC6D1002FF4EA /* WorkerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerCell.h; sourceTree = "<group>"; };
-		B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerCell.m; sourceTree = "<group>"; };
 		B06922F61CFD36AE00B2652D /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
 		B06922FD1CFD75E900B2652D /* settingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsController.h; sourceTree = "<group>"; };
 		B06922FE1CFD75E900B2652D /* settingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsController.m; sourceTree = "<group>"; };
 		B06922FF1CFD75E900B2652D /* settingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsController.xib; sourceTree = "<group>"; };
+		B078ADEA1D00073000E36066 /* FocusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusVC.h; sourceTree = "<group>"; };
+		B078ADEB1D00073000E36066 /* FocusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusVC.m; sourceTree = "<group>"; };
+		B078ADED1D00074300E36066 /* GoodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodVC.h; sourceTree = "<group>"; };
+		B078ADEE1D00074300E36066 /* GoodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodVC.m; sourceTree = "<group>"; };
+		B078ADF01D00076000E36066 /* NewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsVC.h; sourceTree = "<group>"; };
+		B078ADF11D00076000E36066 /* NewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsVC.m; sourceTree = "<group>"; };
+		B078ADF31D00088600E36066 /* FocusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCell.h; sourceTree = "<group>"; };
+		B078ADF41D00088600E36066 /* FocusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusCell.m; sourceTree = "<group>"; };
+		B078ADF61D00089800E36066 /* GoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodCell.h; sourceTree = "<group>"; };
+		B078ADF71D00089800E36066 /* GoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodCell.m; sourceTree = "<group>"; };
+		B078ADF91D0008AB00E36066 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		B078ADFA1D0008AB00E36066 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		B078ADFC1D0009DF00E36066 /* FocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusModel.h; sourceTree = "<group>"; };
+		B078ADFD1D0009DF00E36066 /* FocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusModel.m; sourceTree = "<group>"; };
+		B078ADFF1D0009F400E36066 /* GoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodModel.h; sourceTree = "<group>"; };
+		B078AE001D0009F400E36066 /* GoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodModel.m; sourceTree = "<group>"; };
+		B078AE021D000A0400E36066 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		B078AE031D000A0400E36066 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		B0FB01111CFC176900C2C957 /* MeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeModel.h; sourceTree = "<group>"; };
 		B0FB01121CFC176900C2C957 /* MeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -789,15 +788,14 @@
 		B02840C51CFBC6D1002FF4EA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B02840C61CFBC6D1002FF4EA /* AddLaborVC.h */,
-				B02840C71CFBC6D1002FF4EA /* AddLaborVC.m */,
-				B02840C81CFBC6D1002FF4EA /* AddLaborVC.xib */,
-				B02840C91CFBC6D1002FF4EA /* LaborVC.h */,
-				B02840CA1CFBC6D1002FF4EA /* LaborVC.m */,
 				B02840CB1CFBC6D1002FF4EA /* DiscoverController.h */,
 				B02840CC1CFBC6D1002FF4EA /* DiscoverController.m */,
-				B02840CD1CFBC6D1002FF4EA /* WorkerVC.h */,
-				B02840CE1CFBC6D1002FF4EA /* WorkerVC.m */,
+				B078ADEA1D00073000E36066 /* FocusVC.h */,
+				B078ADEB1D00073000E36066 /* FocusVC.m */,
+				B078ADED1D00074300E36066 /* GoodVC.h */,
+				B078ADEE1D00074300E36066 /* GoodVC.m */,
+				B078ADF01D00076000E36066 /* NewsVC.h */,
+				B078ADF11D00076000E36066 /* NewsVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -805,10 +803,12 @@
 		B02840CF1CFBC6D1002FF4EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B02840D01CFBC6D1002FF4EA /* LaborCellModel.h */,
-				B02840D11CFBC6D1002FF4EA /* LaborCellModel.m */,
-				B02840D21CFBC6D1002FF4EA /* WorkerCellModel.h */,
-				B02840D31CFBC6D1002FF4EA /* WorkerCellModel.m */,
+				B078ADFC1D0009DF00E36066 /* FocusModel.h */,
+				B078ADFD1D0009DF00E36066 /* FocusModel.m */,
+				B078ADFF1D0009F400E36066 /* GoodModel.h */,
+				B078AE001D0009F400E36066 /* GoodModel.m */,
+				B078AE021D000A0400E36066 /* NewsModel.h */,
+				B078AE031D000A0400E36066 /* NewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -816,13 +816,12 @@
 		B02840D41CFBC6D1002FF4EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B02840D51CFBC6D1002FF4EA /* LabDetails.h */,
-				B02840D61CFBC6D1002FF4EA /* LabDetails.m */,
-				B02840D71CFBC6D1002FF4EA /* LabDetails.xib */,
-				B02840D81CFBC6D1002FF4EA /* LaborCell.h */,
-				B02840D91CFBC6D1002FF4EA /* LaborCell.m */,
-				B02840DA1CFBC6D1002FF4EA /* WorkerCell.h */,
-				B02840DB1CFBC6D1002FF4EA /* WorkerCell.m */,
+				B078ADF31D00088600E36066 /* FocusCell.h */,
+				B078ADF41D00088600E36066 /* FocusCell.m */,
+				B078ADF61D00089800E36066 /* GoodCell.h */,
+				B078ADF71D00089800E36066 /* GoodCell.m */,
+				B078ADF91D0008AB00E36066 /* NewsCell.h */,
+				B078ADFA1D0008AB00E36066 /* NewsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -942,7 +941,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02840E41CFBC6D1002FF4EA /* LabDetails.xib in Resources */,
 				B003C3481CC7431200B5C1C8 /* AlipaySDK.bundle in Resources */,
 				016C3DB21CBDF00D0007FC8F /* LaunchScreen.storyboard in Resources */,
 				010CD2AA1CC469C300AB6620 /* ProductInfoHeaderView.xib in Resources */,
@@ -960,7 +958,6 @@
 				016C3E4B1CC095D50007FC8F /* ProductCategoryCell.xib in Resources */,
 				016C3E501CC0AAB30007FC8F /* SelectCollectionViewCell.xib in Resources */,
 				B020DD251CC86D6B00627C74 /* sinostar.jpg in Resources */,
-				B02840DD1CFBC6D1002FF4EA /* AddLaborVC.xib in Resources */,
 				016C3E221CBF73EB0007FC8F /* ProductHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1019,6 +1016,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B078ADF21D00076000E36066 /* NewsVC.m in Sources */,
 				B003C3421CC7431200B5C1C8 /* DataVerifier.m in Sources */,
 				B02840DF1CFBC6D1002FF4EA /* DiscoverController.m in Sources */,
 				016C3E351CBF82FF0007FC8F /* ProductSingularCell.m in Sources */,
@@ -1026,15 +1024,15 @@
 				016C3DED1CBDF0250007FC8F /* MeViewController.m in Sources */,
 				016C3DAA1CBDF00D0007FC8F /* ViewController.m in Sources */,
 				B003C2D31CC7331000B5C1C8 /* CYStepper.m in Sources */,
-				B02840E21CFBC6D1002FF4EA /* WorkerCellModel.m in Sources */,
 				B003C33E1CC7431200B5C1C8 /* AlipayRequestConfig.m in Sources */,
 				B003C3471CC7431200B5C1C8 /* RSADataVerifier.m in Sources */,
-				B02840E51CFBC6D1002FF4EA /* LaborCell.m in Sources */,
+				B078ADFB1D0008AB00E36066 /* NewsCell.m in Sources */,
 				016C3DEC1CBDF0250007FC8F /* MainTabBarController.m in Sources */,
 				B06923001CFD75E900B2652D /* settingsController.m in Sources */,
-				B02840E11CFBC6D1002FF4EA /* LaborCellModel.m in Sources */,
-				B02840DE1CFBC6D1002FF4EA /* LaborVC.m in Sources */,
 				B003C3401CC7431200B5C1C8 /* base64.m in Sources */,
+				B078ADEF1D00074300E36066 /* GoodVC.m in Sources */,
+				B078ADF81D00089800E36066 /* GoodCell.m in Sources */,
+				B078ADEC1D00073000E36066 /* FocusVC.m in Sources */,
 				016C3DA71CBDF00D0007FC8F /* AppDelegate.m in Sources */,
 				016C3DEB1CBDF0250007FC8F /* MainNavigationController.m in Sources */,
 				B003C3451CC7431200B5C1C8 /* openssl_wrapper.m in Sources */,
@@ -1042,27 +1040,27 @@
 				B003C3441CC7431200B5C1C8 /* NSDataEx.m in Sources */,
 				016C3E151CBF69FC0007FC8F /* ProductHeaderView.m in Sources */,
 				B003C3461CC7431200B5C1C8 /* RSADataSigner.m in Sources */,
+				B078ADFE1D0009DF00E36066 /* FocusModel.m in Sources */,
 				B004C99F1CC4942A003E2D11 /* ShopModel.m in Sources */,
 				B003C3431CC7431200B5C1C8 /* MD5DataSigner.m in Sources */,
 				B003C33F1CC7431200B5C1C8 /* Order.m in Sources */,
 				016C3DEE1CBDF0250007FC8F /* ProductViewController.m in Sources */,
+				B078AE011D0009F400E36066 /* GoodModel.m in Sources */,
 				016C3E531CC0DD100007FC8F /* ProductMenuViewController.m in Sources */,
 				B0FB01131CFC176900C2C957 /* MeModel.m in Sources */,
 				016C3E301CBF82BF0007FC8F /* ProductDoubleCell.m in Sources */,
 				010CD2A81CC469A500AB6620 /* ProductInfoHeaderView.m in Sources */,
 				010CD2A51CC466C500AB6620 /* ProductInfoViewController.m in Sources */,
+				B078AE041D000A0400E36066 /* NewsModel.m in Sources */,
 				016C3DF01CBDF0250007FC8F /* ShopViewController.m in Sources */,
 				016C3E261CBF77770007FC8F /* ProductFirstCell.m in Sources */,
 				010CD2AE1CC474BB00AB6620 /* ProductInfoFirstCell.m in Sources */,
-				B02840E61CFBC6D1002FF4EA /* WorkerCell.m in Sources */,
 				010CD2CD1CC4D01700AB6620 /* ProductInfoSecondCell.m in Sources */,
-				B02840DC1CFBC6D1002FF4EA /* AddLaborVC.m in Sources */,
 				016C3E4F1CC0AAB30007FC8F /* SelectCollectionViewCell.m in Sources */,
 				016C3E461CC08F9C0007FC8F /* ProductCategoryViewController.m in Sources */,
-				B02840E31CFBC6D1002FF4EA /* LabDetails.m in Sources */,
-				B02840E01CFBC6D1002FF4EA /* WorkerVC.m in Sources */,
 				B003C3411CC7431200B5C1C8 /* DataSigner.m in Sources */,
 				016C3E2B1CBF82AD0007FC8F /* ProductSecondCell.m in Sources */,
+				B078ADF51D00088600E36066 /* FocusCell.m in Sources */,
 				016C3E4A1CC095D50007FC8F /* ProductCategoryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

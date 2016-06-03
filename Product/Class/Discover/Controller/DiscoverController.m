@@ -7,11 +7,13 @@
 //
 
 #import "DiscoverController.h"
-#import "LaborVC.h"
+#import "NewsVC.h"
+#import "GoodVC.h"
+#import "FocusVC.h"
 @interface DiscoverController ()
-@property(nonatomic, strong)LaborVC *labor1;//上新
-@property(nonatomic, strong)LaborVC *labor2;//关注
-@property(nonatomic, strong)LaborVC *labor3;//良品
+@property(nonatomic, strong)NewsVC *news;//上新
+@property(nonatomic, strong)FocusVC *focus;//关注
+@property(nonatomic, strong)GoodVC *good;//良品
 @property(nonatomic, strong)UIView *temp;
 @property(nonatomic, retain)UISegmentedControl *discover;
 @end
@@ -25,16 +27,12 @@
         _discover.frame = CGRectMake(SCREEN_WIDTH/2-100, 0, 200, 40);
         _discover.selectedSegmentIndex = 0;
         [_discover addTarget:self action:@selector(choose:) forControlEvents:UIControlEventValueChanged];
-        _discover.tintColor = [UIColor greenColor];
-        _discover.layer.masksToBounds = YES;
-        _discover.layer.cornerRadius = 20;
-        _discover.layer.borderWidth = 1;
-        _discover.layer.borderColor = TabBarBackGroundColor.CGColor;
+        _discover.tintColor = [UIColor clearColor];
         NSDictionary* selectedTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
-                                                 NSForegroundColorAttributeName: [UIColor whiteColor]};
+                                                 NSForegroundColorAttributeName: [UIColor redColor]};
         [_discover setTitleTextAttributes:selectedTextAttributes forState:UIControlStateSelected];
         NSDictionary* unselectedTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
-                                                   NSForegroundColorAttributeName: [UIColor lightTextColor]};
+                                                   NSForegroundColorAttributeName: [UIColor whiteColor]};
         [_discover setTitleTextAttributes:unselectedTextAttributes forState:UIControlStateNormal];
     }
     return self;
@@ -54,12 +52,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _labor1 = [[LaborVC alloc]init];
-    _labor2 = [[LaborVC alloc]init];
-    _labor3 = [[LaborVC alloc]init];
+    _news = [[NewsVC alloc]init];
+    _focus = [[FocusVC alloc]init];
+    _good = [[GoodVC alloc]init];
     
-    [self.view addSubview:_labor1.view];
-    _temp = _labor1.view;
+    [self.view addSubview:_news.view];
+    _temp = _news.view;
 }
 
 - (void)choose:(UISegmentedControl *)segment{
@@ -67,7 +65,7 @@
         case 0:
         {
             [_temp removeFromSuperview];
-            _temp = _labor1.view;
+            _temp = _news.view;
             [self.view addSubview: _temp];
             break;
         }
@@ -75,7 +73,7 @@
         case 1:
         {
             [_temp removeFromSuperview];
-            _temp = _labor2.view;
+            _temp = _focus.view;
             [self.view addSubview: _temp];
             break;
         }
@@ -83,7 +81,7 @@
         case 2:
         {
             [_temp removeFromSuperview];
-            _temp = _labor3.view;
+            _temp = _good.view;
             [self.view addSubview: _temp];
             break;
         }

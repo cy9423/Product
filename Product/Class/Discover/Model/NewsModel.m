@@ -1,20 +1,20 @@
 //
-//  WorkerCellModel.m
+//  NewModel.m
 //  Product
 //
-//  Created by hanxingdl on 16/4/15.
+//  Created by hanxingdl on 16/6/2.
 //  Copyright © 2016年 cy. All rights reserved.
 //
 
-#import "WorkerCellModel.h"
+#import "NewsModel.h"
 
-@implementation WorkerCellModel
+@implementation NewsModel
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }
 
 + (id)modWithDic:(NSDictionary *)dic{
-    WorkerCellModel *mod = [[WorkerCellModel alloc]init];
+    NewsModel *mod = [[NewsModel alloc]init];
     [mod setValuesForKeysWithDictionary:dic];
     //    [mod setValue:[dic objectForKey:@"description"] forKey:@"desc"];
     return mod;
