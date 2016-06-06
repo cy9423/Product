@@ -9,7 +9,7 @@
 #import "ProductCategoryViewController.h"
 #import "ProductCategoryCell.h"
 #import "ProductInfoViewController.h"
-
+#import "ProductClassifyViewController.h"
 @interface ProductCategoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *tv;
@@ -57,9 +57,9 @@
     
     cell.block = ^(){
       
-        ProductInfoViewController *pvc = [[ProductInfoViewController alloc] init];
+        ProductClassifyViewController *pvc = [[ProductClassifyViewController alloc] init];
         
-        [self.navigationController pushViewController:pvc animated:YES];
+        [self.navigationController pushViewController:pvc animated:NO];
     };
     
     [cell updateCellWith:dataArr];
