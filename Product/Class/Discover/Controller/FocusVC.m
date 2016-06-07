@@ -20,7 +20,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _cellheight = 40;
-        _tablist = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -41,6 +40,11 @@
     [self handelData];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self handelData];
+}
+
 - (void)handelData{
     //    //开始请求数据
     //    [_table.header beginRefreshing];
@@ -54,10 +58,20 @@
                                             @{@"pic":@"https://img.alicdn.com/bao/uploaded/i1/TB1LHmTGFXXXXaOXpXXXXXXXXXX_!!0-item_pic.jpg"},
                                             @{@"pic":@"https://img.alicdn.com/bao/uploaded/i3/TB1KX9gHXXXXXbEXVXXXXXXXXXX_!!0-item_pic.jpg"},
                                             @{@"pic":@"https://img.alicdn.com/imgextra/i3/2294044846/TB2mjYspXXXXXbaXpXXXXXXXXXX_!!2294044846.jpg"}]};
-    for (NSDictionary *dic in [tempDic objectForKey:@"allFocus"]) {
-        FocusModel *mod = [FocusModel modWithDic:dic];
-        [_tablist addObject:mod];
+    
+    _tablist = [[NSMutableArray alloc]init];
+    if ([[tempDic objectForKey:@"allFocus"] isEqual:@[]]) {
+        UIImageView *img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sinostar.jpg"]];
+        _table.tableFooterView = img;
+        _table.tableFooterView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 300);
+    } else {
+        for (NSDictionary *dic in [tempDic objectForKey:@"allFocus"]) {
+            FocusModel *mod = [FocusModel modWithDic:dic];
+            [_tablist addObject:mod];
+        }
+        _table.tableFooterView = nil;
     }
+    [_table reloadData];
 }
 
 

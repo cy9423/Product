@@ -20,7 +20,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _cellheight = 40;
-        _tablist = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -41,6 +40,11 @@
     [self handelData];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self handelData];
+}
+
 - (void)handelData{
     //    //开始请求数据
     //    [_table.header beginRefreshing];
@@ -54,10 +58,12 @@
                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i1/TB1LHmTGFXXXXaOXpXXXXXXXXXX_!!0-item_pic.jpg"},
                                            @{@"pic":@"https://img.alicdn.com/bao/uploaded/i3/TB1KX9gHXXXXXbEXVXXXXXXXXXX_!!0-item_pic.jpg"},
                                            @{@"pic":@"https://img.alicdn.com/imgextra/i3/2294044846/TB2mjYspXXXXXbaXpXXXXXXXXXX_!!2294044846.jpg"}]};
+    _tablist = [[NSMutableArray alloc]init];
     for (NSDictionary *dic in [tempDic objectForKey:@"allGood"]) {
         GoodModel *mod = [GoodModel modWithDic:dic];
         [_tablist addObject:mod];
     }
+    [_table reloadData];
 }
 
 
