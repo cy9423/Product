@@ -57,9 +57,9 @@
     
     cell.block = ^(){
       
-        ProductClassifyViewController *pvc = [[ProductClassifyViewController alloc] init];
+        ProductInfoViewController *pvc = [[ProductInfoViewController alloc] init];
         
-        [self.navigationController pushViewController:pvc animated:NO];
+        [self.navigationController pushViewController:pvc animated:YES];
     };
     
     [cell updateCellWith:dataArr];

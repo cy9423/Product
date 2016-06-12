@@ -13,6 +13,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self.locationBtn addTarget:self action:@selector(location) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)location
+{
+    self.block();
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -40,30 +40,17 @@
                         <constraint firstAttribute="height" constant="80" id="pwE-MD-ocW"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_zhuangxiuyouhui_" translatesAutoresizingMaskIntoConstraints="NO" id="7UX-tb-Ft8">
-                    <rect key="frame" x="65" y="335" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="gcT-7O-7RT"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico_zhuangxiuyouhui_" translatesAutoresizingMaskIntoConstraints="NO" id="7UX-tb-Ft8">
+                    <rect key="frame" x="104" y="338" width="50" height="50"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热卖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjm-hA-Gyy">
-                    <rect key="frame" x="20" y="335" width="40" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="40" id="2vm-B0-IV8"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商贸城精选" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjm-hA-Gyy">
+                    <rect key="frame" x="8" y="338" width="94" height="50"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1c-mF-s9o">
-                    <rect key="frame" x="120" y="345" width="1" height="30"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="1" id="eLT-mA-vQp"/>
-                    </constraints>
-                </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-b9-QYz">
-                    <rect key="frame" x="126" y="330" width="283" height="60"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-b9-QYz">
+                    <rect key="frame" x="176" y="335" width="230" height="55"/>
                 </scrollView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-nA-GA3">
                     <rect key="frame" x="0.0" y="40" width="414" height="200"/>
@@ -71,30 +58,21 @@
                         <constraint firstAttribute="height" constant="200" id="PiX-g0-qno"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1c-mF-s9o">
+                    <rect key="frame" x="162" y="348" width="1" height="30"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="tjk-nA-GA3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Gq-Uz-OMB"/>
-                <constraint firstAttribute="bottom" secondItem="vU7-b9-QYz" secondAttribute="bottom" constant="10" id="0bC-hS-fpG"/>
                 <constraint firstItem="AYA-cq-3Rs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7mf-rN-2Vj"/>
                 <constraint firstItem="y3C-8y-n3H" firstAttribute="top" secondItem="tjk-nA-GA3" secondAttribute="bottom" id="8kn-FX-JOC"/>
-                <constraint firstItem="L1c-mF-s9o" firstAttribute="leading" secondItem="7UX-tb-Ft8" secondAttribute="trailing" constant="5" id="9Tb-So-hmh"/>
-                <constraint firstItem="Mjm-hA-Gyy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="F2v-Mq-i3c"/>
                 <constraint firstItem="tjk-nA-GA3" firstAttribute="top" secondItem="AYA-cq-3Rs" secondAttribute="bottom" id="FZZ-UE-E7b"/>
-                <constraint firstAttribute="bottom" secondItem="7UX-tb-Ft8" secondAttribute="bottom" constant="15" id="IwA-iL-HyG"/>
                 <constraint firstAttribute="trailing" secondItem="tjk-nA-GA3" secondAttribute="trailing" id="Pfb-Bw-ZV3"/>
-                <constraint firstAttribute="bottom" secondItem="L1c-mF-s9o" secondAttribute="bottom" constant="25" id="Uxp-V7-jJq"/>
-                <constraint firstItem="Mjm-hA-Gyy" firstAttribute="top" secondItem="y3C-8y-n3H" secondAttribute="bottom" constant="15" id="VSR-t8-f47"/>
-                <constraint firstItem="7UX-tb-Ft8" firstAttribute="leading" secondItem="Mjm-hA-Gyy" secondAttribute="trailing" constant="5" id="Z4D-eG-MK5"/>
                 <constraint firstItem="AYA-cq-3Rs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZNw-Wd-6qs"/>
-                <constraint firstItem="vU7-b9-QYz" firstAttribute="top" secondItem="y3C-8y-n3H" secondAttribute="bottom" constant="10" id="fjM-Ek-Gir"/>
-                <constraint firstAttribute="bottom" secondItem="Mjm-hA-Gyy" secondAttribute="bottom" constant="15" id="ht0-Wd-DW4"/>
                 <constraint firstItem="y3C-8y-n3H" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="k2O-yZ-tgU"/>
-                <constraint firstItem="7UX-tb-Ft8" firstAttribute="top" secondItem="y3C-8y-n3H" secondAttribute="bottom" constant="15" id="lvY-GE-tco"/>
-                <constraint firstAttribute="trailing" secondItem="vU7-b9-QYz" secondAttribute="trailing" constant="5" id="mdd-p3-TXt"/>
-                <constraint firstItem="vU7-b9-QYz" firstAttribute="leading" secondItem="L1c-mF-s9o" secondAttribute="trailing" constant="5" id="on9-g4-QQO"/>
                 <constraint firstAttribute="trailing" secondItem="AYA-cq-3Rs" secondAttribute="trailing" id="w9b-in-U9v"/>
-                <constraint firstItem="L1c-mF-s9o" firstAttribute="top" secondItem="y3C-8y-n3H" secondAttribute="bottom" constant="25" id="wVz-uz-XaV"/>
                 <constraint firstAttribute="trailing" secondItem="y3C-8y-n3H" secondAttribute="trailing" id="wWW-DA-Rt0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -109,7 +87,7 @@
                 <outlet property="sdScrollView" destination="tjk-nA-GA3" id="ezY-FU-I6t"/>
                 <outlet property="searchTF" destination="PD0-d7-IIO" id="mMh-Ew-lgq"/>
             </connections>
-            <point key="canvasLocation" x="459" y="446"/>
+            <point key="canvasLocation" x="458" y="446"/>
         </view>
     </objects>
     <resources>

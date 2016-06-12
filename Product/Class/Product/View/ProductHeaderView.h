@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *cutomView;
 @property (weak, nonatomic) IBOutlet UIScrollView *adScrollView;
 
-@property (nonatomic,copy) void(^btnBlcok)();
+@property (nonatomic,copy) void(^btnBlcok)(int );
 
 @property (nonatomic,strong) NSMutableArray *dataArr;
 @property (nonatomic,strong) NSMutableArray *titleArr;

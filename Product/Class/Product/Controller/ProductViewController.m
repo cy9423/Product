@@ -7,6 +7,7 @@
 //
 
 #import "ProductViewController.h"
+#import "ProductClassifyViewController.h"
 #import "Product.h"
 
 
@@ -21,7 +22,7 @@
 }
 
 @property (nonatomic,strong) ProductCategoryViewController *pcc;
-
+@property (nonatomic,strong) ProductClassifyViewController *pcf;
 @end
 
 @implementation ProductViewController
@@ -39,7 +40,7 @@
 
 - (void)initData
 {
-    dataArr = [NSMutableArray array];
+    dataArr = [NSMutableArray arrayWithObjects:@"秒杀底价",@"商贸精品",@"近期热门",@"人气店铺",@"装修好货",@"居家必败",@"猜你喜欢", nil];
     picArr = [NSMutableArray arrayWithObjects:@"6_02",@"6_03",@"6_04",@"6_05", nil];
     
     titleArr = [NSMutableArray arrayWithObjects:@"买啥都2快",@"促销大减价",@"就是便宜",@"快来买啊", nil];
@@ -53,11 +54,17 @@
     
     [pv updateViewWith:picArr And:titleArr];
     
-    pv.btnBlcok = ^(){
-        
-        _pcc = [[ProductCategoryViewController alloc] init];
-        
-       [self.navigationController pushViewController:_pcc animated:YES];
+    __weak typeof(self)weakself = self;
+    pv.btnBlcok = ^(int a){
+        if (a < 3) {
+            weakself.pcc = [[ProductCategoryViewController alloc] init];
+            
+            [weakself.navigationController pushViewController:weakself.pcc animated:YES];
+        }
+        if (a == 3) {
+            weakself.pcf = [[ProductClassifyViewController alloc] init];
+            [weakself.navigationController pushViewController:weakself.pcf animated:YES];
+        }
        
     };
     
@@ -84,7 +91,7 @@
 //段数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return dataArr.count;
 }
 //行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -140,6 +147,15 @@
 {
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
    
+    v.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, SCREEN_WIDTH - 40, 30)];
+    [v addSubview:lb];
+    
+    lb.text = dataArr[section];
+    lb.font = [UIFont boldSystemFontOfSize:20];
+    lb.textAlignment = NSTextAlignmentCenter;
+    
     return v;
 }
 
@@ -153,14 +169,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

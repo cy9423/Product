@@ -101,9 +101,9 @@
 
 - (void)onClickBtn:(UIButton *)btn
 {
-    if ((int)btn.tag - 100 == 0) {
-        self.btnBlcok();
-    }
+    int num = (int)btn.tag - 100;
+    self.btnBlcok(num);
+   
     
 }
 

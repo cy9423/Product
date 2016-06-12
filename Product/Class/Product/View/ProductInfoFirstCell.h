@@ -10,4 +10,8 @@
 
 @interface ProductInfoFirstCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *locationBtn;
+
+@property (nonatomic,copy) void(^block)();
+
 @end

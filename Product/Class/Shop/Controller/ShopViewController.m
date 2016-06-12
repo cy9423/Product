@@ -9,25 +9,23 @@
 #import "ShopViewController.h"
 #import "ShopCell.h"
 #import "ShopModel.h"
+#import "ProductInfoViewController.h"
 
 @interface ShopViewController()<UITableViewDelegate, UITableViewDataSource>
+
 @property(nonatomic, retain)UITableView *table;//列表
 @property(nonatomic, assign)NSInteger cellheight;//cell高度
-@property(nonatomic, retain)UIButton *price;//计算价格
 @property(nonatomic, retain)NSMutableArray *arr;
 @end
 
 @implementation ShopViewController
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
         _cellheight = 40;
         _arr = [[NSMutableArray alloc]init];
-        _price = [UIButton buttonWithType:UIButtonTypeSystem];
-        _price.frame =CGRectMake(SCREEN_WIDTH-50, 10, 50, 25);
-        [_price setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_price setTitle:@"支付" forState:UIControlStateNormal];
-        [_price addTarget:self action:@selector(count:) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return self;
 }
@@ -35,18 +33,26 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.navigationController.navigationBar addSubview:_price];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [_price removeFromSuperview];
+   
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self createTableView];
+
+}
+
+#pragma mark - 创建UITableView
+- (void)createTableView
+{
     //创建tableview
     _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-40) style:UITableViewStyleGrouped];
     _table.backgroundColor = [UIColor lightGrayColor];
@@ -54,9 +60,9 @@
     _table.dataSource = self;
     [_table setSeparatorStyle:UITableViewCellSeparatorStyleNone];//分割线
     [self.view addSubview:_table];
-    
     [_table registerClass:[ShopCell class] forCellReuseIdentifier:@"ShopCell"];
 }
+
 
 //判断cell种类
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -90,14 +96,12 @@
     [headerBack addSubview:headerView];
     return headerBack;
 }
-//按钮的点击事件
-- (void)count:(UIBarButtonItem *)button {
-    for (ShopCell *cell in _arr) {
-        NSLog(@"%@%d件,单价%@", cell.title.text, cell.num, cell.price.text);
-    }
-    [AlipayRequestConfig alipayWithPartner:kPartnerID seller:kSellerAccount tradeNO:[AlipayToolKit genTradeNoWithTime] productName:@"邮票" productDescription:@"全真邮票" amount:@"0.8" notifyURL:kNotifyURL itBPay:@"30m"];
-}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ProductInfoViewController *pic = [[ProductInfoViewController alloc] init];
+    [self.navigationController pushViewController:pic animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
