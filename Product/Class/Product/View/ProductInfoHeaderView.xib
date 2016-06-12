@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="300" width="414" height="100"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWm-0d-fyW">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="66.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
                             <string key="text" base64-UTF8="YES">
 Sm95b3VuZy/kuZ3pmLMgSllZLTUwWVMyNxDmmbrog73nlLXljovlipvplIU
 </string>
@@ -27,8 +27,8 @@ Sm95b3VuZy/kuZ3pmLMgSllZLTUwWVMyNxDmmbrog73nlLXljovlipvplIU
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="智能调压、一煲双胆、易清洗、智能预约" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hk-8a-VSa">
-                            <rect key="frame" x="0.0" y="66" width="414" height="33.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="智能调压、一煲双胆、易清洗、智能预约" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hk-8a-VSa">
+                            <rect key="frame" x="0.0" y="66" width="414" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
