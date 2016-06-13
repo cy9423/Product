@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-AMap2DMap.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5597CAE128033D0CCCC9B435</key>
+		<key>18CF6FD3EF7E8BA307CE535A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B53A9D540A69BCDC25B3F248</key>
+		<key>5FAD8BF0635ED25E05E2ED6A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98BC56B068EF721E39B5CF96</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,7 +9,7 @@
 #import "ProductViewController.h"
 #import "ProductClassifyViewController.h"
 #import "Product.h"
-
+#import "ProductMessageViewController.h"
 
 @interface ProductViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -17,7 +17,7 @@
     NSMutableArray *dataArr;
     NSMutableArray *picArr;
     NSMutableArray *titleArr;
-    
+    UIButton *setBtn;
     ProductHeaderView *pv;
 }
 
@@ -27,6 +27,33 @@
 
 @implementation ProductViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        setBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        setBtn.frame =CGRectMake(SCREEN_WIDTH - 45, 10, 25, 25);
+        [setBtn setBackgroundImage:[UIImage imageNamed:@"设置"] forState:UIControlStateNormal];
+        [setBtn addTarget:self action:@selector(setting) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar addSubview:setBtn];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [setBtn removeFromSuperview];
+}
+#pragma mark - 设置
+- (void)setting
+{
+    ProductMessageViewController *pmc = [[ProductMessageViewController alloc] init];
+    [self.navigationController pushViewController:pmc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

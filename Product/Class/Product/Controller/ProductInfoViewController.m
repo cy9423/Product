@@ -13,12 +13,15 @@
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 #import "ProductMessageViewController.h"
-@interface ProductInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate>
+#import <MAMapKit/MAMapKit.h>
+@interface ProductInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate,MAMapViewDelegate>
 {
     UITableView *tv;
     NSMutableArray *dataArr;
     UIButton *shareBtn;
     UIButton *setBtn;
+    UIButton *favoriteBtn;
+    MAMapView *_mapView;
 }
 @end
 
@@ -28,6 +31,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+        
+        favoriteBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 125, 10, 25, 25)];
+        [favoriteBtn setBackgroundImage:[UIImage imageNamed:@"收藏"] forState:UIControlStateNormal];
+        [favoriteBtn addTarget:self action:@selector(favorite) forControlEvents:UIControlEventTouchUpInside];
+        
         shareBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         shareBtn.frame =CGRectMake(SCREEN_WIDTH - 90, 10, 25, 25);
         [shareBtn setBackgroundImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
@@ -58,37 +66,58 @@
     [self.navigationController pushViewController:pmc animated:YES];
 }
 
+#pragma mark - 收藏
+- (void)favorite
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"商品已被收藏" preferredStyle: UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [self presentViewController:alert animated:true completion:nil];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.toolbarHidden = NO;
     
     self.navigationController.toolbar.barStyle = UIBarStyleBlack;
     
-    UIButton *btn_1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 45)];
+    UIButton *btn_1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 45)];
     [btn_1 setTitle:@"客服" forState:UIControlStateNormal];
     [btn_1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     btn_1.titleLabel.font = [UIFont boldSystemFontOfSize:15];
     
-    UIButton *btn_2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 0, (SCREEN_WIDTH - 200) / 2.0, 45)];
+    UIButton *btn_2 = [[UIButton alloc] initWithFrame:CGRectMake(80, 0, 80, 45)];
     [btn_2 setTitle:@"立即购买" forState:UIControlStateNormal];
     [btn_2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn_2 setBackgroundColor:[UIColor orangeColor]];
+    //[btn_2 setBackgroundColor:[UIColor orangeColor]];
     btn_2.titleLabel.font = [UIFont boldSystemFontOfSize:15];
     
-    UIButton *btn_3 = [[UIButton alloc] initWithFrame:CGRectMake(100 + (SCREEN_WIDTH - 200) / 2.0, 0, (SCREEN_WIDTH - 200) / 2.0, 45)];
+    UIButton *btn_3 = [[UIButton alloc] initWithFrame:CGRectMake(160, 0, 80, 45)];
     [btn_3 setTitle:@"加入购物车" forState:UIControlStateNormal];
     [btn_3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn_3 setBackgroundColor:[UIColor magentaColor]];
+    //[btn_3 setBackgroundColor:[UIColor magentaColor]];
      btn_3.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+    
+    
+    UIButton *btn_4 = [[UIButton alloc] initWithFrame:CGRectMake(240, 0, 80, 45)];
+    [btn_4 setTitle:@"店铺" forState:UIControlStateNormal];
+    [btn_4 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //[btn_4 setBackgroundColor:[UIColor cyanColor]];
+    btn_4.titleLabel.font = [UIFont boldSystemFontOfSize:15];
     
     UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:btn_1];
     UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:btn_2];
     UIBarButtonItem *btn3 = [[UIBarButtonItem alloc] initWithCustomView:btn_3];
-    NSArray *arr = [NSArray arrayWithObjects:btn1,btn2,btn3, nil];
+    UIBarButtonItem *btn4 = [[UIBarButtonItem alloc] initWithCustomView:btn_4];
+    NSArray *arr = [NSArray arrayWithObjects:btn1,btn2,btn3,btn4, nil];
     self.toolbarItems = arr;
     
     [self.navigationController.navigationBar addSubview:shareBtn];
     [self.navigationController.navigationBar addSubview:setBtn];
+    [self.navigationController.navigationBar addSubview:favoriteBtn];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -96,6 +125,7 @@
     self.navigationController.toolbarHidden = YES;
     [shareBtn removeFromSuperview];
     [setBtn removeFromSuperview];
+    [favoriteBtn removeFromSuperview];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -105,6 +135,7 @@
     [UMSocialData setAppKey:@"568ccedde0f55ab214000a3e"];
     
     [UMSocialWechatHandler setWXAppId:@"wx87a53db0526ec705" appSecret:@"304dc6f2b158e4d704af9682f451a496" url:@"http://www.1000phone.com"];
+    [MAMapServices sharedServices].apiKey = @"f44867c4fea5789202958aba4aca5d57";
     [self initDataSource];
     
     [self createTableView];
@@ -153,8 +184,11 @@
     if (indexPath.row == 0) {
         ProductInfoFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pdInfoFirst" forIndexPath:indexPath];
         cell.block = ^(){
-            
-            
+            _mapView.showsUserLocation = YES;
+            _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,SCREEN_HEIGHT)];
+            _mapView.delegate = self;
+            [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES];
+            [self.view addSubview:_mapView];
             
         };
         return cell;
@@ -197,6 +231,17 @@
     [pv updateViewWith:dataArr];
     
     tv.tableHeaderView = pv;
+}
+
+
+-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
+updatingLocation:(BOOL)updatingLocation
+{
+    if(updatingLocation)
+    {
+        //取出当前位置的坐标
+        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+    }
 }
 
 @end
