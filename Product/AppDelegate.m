@@ -24,7 +24,7 @@
     //创建试图控制器对象
     MainTabBarController *mc = [[MainTabBarController alloc] init];
     MainNavigationController *mnc = [[MainNavigationController alloc] initWithRootViewController:mc];
-    
+    [self pushWith:application];
     //设置窗口的背景颜色
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -35,7 +35,33 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+- (void)pushWith:(UIApplication *)application
+{
+    //无论本地推送还是远处推送 均需询问用户是否开启推送功能
+    //版本适配
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+        
+        //采用新方法
+        //1.推送设置
+        /*
+         1.推送的类型（文字、声音、标识）
+         2.额外操作（额外按钮）
+         */
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+        
+        //2.程序接收设置
+        [application registerUserNotificationSettings:settings];
+        
+        //3.开启并询问
+        [application registerForRemoteNotifications];
+    }else
+    {
+        [application registerForRemoteNotificationTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound];
+        
+        [application registerForRemoteNotifications];
+    }
 
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -73,4 +99,18 @@
     return YES;
 }
 
+#pragma mark - 用于接收本地消息
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    NSLog(@"接收");
+    
+    NSString *url = [NSString stringWithFormat:@"是否打开来自%@的消息",notification.userInfo[@"URL"]];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:url delegate:self cancelButtonTitle:@"前往播放" otherButtonTitles:@"拒绝", nil];
+    
+    [alert show];
+    
+    
+    
+}
 @end

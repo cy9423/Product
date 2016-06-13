@@ -73,6 +73,40 @@
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
+        //本地推送
+        UILocalNotification *noti = [[UILocalNotification alloc] init];
+        
+        if (noti != nil) {
+            //获取当前时间
+            
+            NSDate *currentTime = [NSDate date];
+            
+            //设置当前时间
+            noti.fireDate = [currentTime dateByAddingTimeInterval:10];
+            
+            //设置推送次数 0:不重复
+            noti.repeatInterval = 0;
+            
+            //设置推送时区
+            noti.timeZone = [NSTimeZone defaultTimeZone];
+            
+            //设置标识个数 =0时表示清空
+            noti.applicationIconBadgeNumber = 1;
+            
+            //设置推送声音 严格遵守苹果音频类型 比如caf
+            noti.soundName = UILocalNotificationDefaultSoundName;
+            
+            //推送内容
+            noti.alertBody = @"您关注的商品已经降价";
+            
+            //详细内容（额外内容）
+            noti.userInfo = @{@"URL":@"http://ww.baidu.com"};
+            
+            //进行发送
+            [[UIApplication sharedApplication] scheduleLocalNotification:noti];
+            
+        }
+        
     }]];
     
     [self presentViewController:alert animated:true completion:nil];
